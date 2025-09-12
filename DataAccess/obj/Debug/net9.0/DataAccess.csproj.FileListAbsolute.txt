@@ -1,0 +1,51 @@
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\DataAccess\bin\Debug\net9.0\DataAccess.deps.json
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\DataAccess\bin\Debug\net9.0\DataAccess.dll
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\DataAccess\bin\Debug\net9.0\DataAccess.pdb
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\DataAccess\bin\Debug\net9.0\Core.dll
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\DataAccess\bin\Debug\net9.0\Entities.dll
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\DataAccess\bin\Debug\net9.0\Core.pdb
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\DataAccess\bin\Debug\net9.0\Entities.pdb
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\DataAccess\obj\Debug\net9.0\DataAccess.csproj.AssemblyReference.cache
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\DataAccess\obj\Debug\net9.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\DataAccess\obj\Debug\net9.0\DataAccess.AssemblyInfoInputs.cache
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\DataAccess\obj\Debug\net9.0\DataAccess.AssemblyInfo.cs
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\DataAccess\obj\Debug\net9.0\DataAccess.csproj.CoreCompileInputs.cache
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\DataAccess\obj\Debug\net9.0\DataAccess.csproj.Up2Date
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\DataAccess\obj\Debug\net9.0\DataAccess.dll
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\DataAccess\obj\Debug\net9.0\refint\DataAccess.dll
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\DataAccess\obj\Debug\net9.0\DataAccess.pdb
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\DataAccess\obj\Debug\net9.0\ref\DataAccess.dll
+D:\Cursor\HastaneRandevuSistemi\DataAccess\bin\Debug\net9.0\DataAccess.deps.json
+D:\Cursor\HastaneRandevuSistemi\DataAccess\bin\Debug\net9.0\DataAccess.dll
+D:\Cursor\HastaneRandevuSistemi\DataAccess\bin\Debug\net9.0\DataAccess.pdb
+D:\Cursor\HastaneRandevuSistemi\DataAccess\bin\Debug\net9.0\Core.dll
+D:\Cursor\HastaneRandevuSistemi\DataAccess\bin\Debug\net9.0\Entities.dll
+D:\Cursor\HastaneRandevuSistemi\DataAccess\bin\Debug\net9.0\Core.pdb
+D:\Cursor\HastaneRandevuSistemi\DataAccess\bin\Debug\net9.0\Entities.pdb
+D:\Cursor\HastaneRandevuSistemi\DataAccess\obj\Debug\net9.0\DataAccess.csproj.AssemblyReference.cache
+D:\Cursor\HastaneRandevuSistemi\DataAccess\obj\Debug\net9.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+D:\Cursor\HastaneRandevuSistemi\DataAccess\obj\Debug\net9.0\DataAccess.AssemblyInfoInputs.cache
+D:\Cursor\HastaneRandevuSistemi\DataAccess\obj\Debug\net9.0\DataAccess.AssemblyInfo.cs
+D:\Cursor\HastaneRandevuSistemi\DataAccess\obj\Debug\net9.0\DataAccess.csproj.CoreCompileInputs.cache
+D:\Cursor\HastaneRandevuSistemi\DataAccess\obj\Debug\net9.0\DataAccess.csproj.Up2Date
+D:\Cursor\HastaneRandevuSistemi\DataAccess\obj\Debug\net9.0\DataAccess.dll
+D:\Cursor\HastaneRandevuSistemi\DataAccess\obj\Debug\net9.0\refint\DataAccess.dll
+D:\Cursor\HastaneRandevuSistemi\DataAccess\obj\Debug\net9.0\DataAccess.pdb
+D:\Cursor\HastaneRandevuSistemi\DataAccess\obj\Debug\net9.0\ref\DataAccess.dll
+D:\HastaneRandevuSistemi\DataAccess\bin\Debug\net9.0\DataAccess.deps.json
+D:\HastaneRandevuSistemi\DataAccess\bin\Debug\net9.0\DataAccess.dll
+D:\HastaneRandevuSistemi\DataAccess\bin\Debug\net9.0\DataAccess.pdb
+D:\HastaneRandevuSistemi\DataAccess\bin\Debug\net9.0\Core.dll
+D:\HastaneRandevuSistemi\DataAccess\bin\Debug\net9.0\Entities.dll
+D:\HastaneRandevuSistemi\DataAccess\bin\Debug\net9.0\Core.pdb
+D:\HastaneRandevuSistemi\DataAccess\bin\Debug\net9.0\Entities.pdb
+D:\HastaneRandevuSistemi\DataAccess\obj\Debug\net9.0\DataAccess.csproj.AssemblyReference.cache
+D:\HastaneRandevuSistemi\DataAccess\obj\Debug\net9.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+D:\HastaneRandevuSistemi\DataAccess\obj\Debug\net9.0\DataAccess.AssemblyInfoInputs.cache
+D:\HastaneRandevuSistemi\DataAccess\obj\Debug\net9.0\DataAccess.AssemblyInfo.cs
+D:\HastaneRandevuSistemi\DataAccess\obj\Debug\net9.0\DataAccess.csproj.CoreCompileInputs.cache
+D:\HastaneRandevuSistemi\DataAccess\obj\Debug\net9.0\DataAccess.csproj.Up2Date
+D:\HastaneRandevuSistemi\DataAccess\obj\Debug\net9.0\DataAccess.dll
+D:\HastaneRandevuSistemi\DataAccess\obj\Debug\net9.0\refint\DataAccess.dll
+D:\HastaneRandevuSistemi\DataAccess\obj\Debug\net9.0\DataAccess.pdb
+D:\HastaneRandevuSistemi\DataAccess\obj\Debug\net9.0\ref\DataAccess.dll

@@ -1,0 +1,573 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\HastaneRandevuSistemi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AB24DEC2-77AB-435F-BFBD-B303D0163558}|Business\\Business.csproj|d:\\hastanerandevusistemi\\business\\concrete\\patientmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB24DEC2-77AB-435F-BFBD-B303D0163558}|Business\\Business.csproj|solutionrelative:business\\concrete\\patientmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB24DEC2-77AB-435F-BFBD-B303D0163558}|Business\\Business.csproj|d:\\hastanerandevusistemi\\business\\concrete\\doctormanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB24DEC2-77AB-435F-BFBD-B303D0163558}|Business\\Business.csproj|solutionrelative:business\\concrete\\doctormanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB24DEC2-77AB-435F-BFBD-B303D0163558}|Business\\Business.csproj|d:\\hastanerandevusistemi\\business\\concrete\\appointmentmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB24DEC2-77AB-435F-BFBD-B303D0163558}|Business\\Business.csproj|solutionrelative:business\\concrete\\appointmentmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB24DEC2-77AB-435F-BFBD-B303D0163558}|Business\\Business.csproj|d:\\hastanerandevusistemi\\business\\concrete\\adminmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB24DEC2-77AB-435F-BFBD-B303D0163558}|Business\\Business.csproj|solutionrelative:business\\concrete\\adminmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FE31807-3089-4BFA-A077-F7669AA37C76}|WebAPI\\WebAPI.csproj|d:\\hastanerandevusistemi\\webapi\\controllers\\patientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FE31807-3089-4BFA-A077-F7669AA37C76}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\patientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FE31807-3089-4BFA-A077-F7669AA37C76}|WebAPI\\WebAPI.csproj|d:\\hastanerandevusistemi\\webapi\\controllers\\doctorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FE31807-3089-4BFA-A077-F7669AA37C76}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\doctorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FE31807-3089-4BFA-A077-F7669AA37C76}|WebAPI\\WebAPI.csproj|d:\\hastanerandevusistemi\\webapi\\controllers\\appointmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FE31807-3089-4BFA-A077-F7669AA37C76}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\appointmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FE31807-3089-4BFA-A077-F7669AA37C76}|WebAPI\\WebAPI.csproj|d:\\hastanerandevusistemi\\webapi\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FE31807-3089-4BFA-A077-F7669AA37C76}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4FCA917-BC05-4F87-AE8A-2EA1F0FFAF76}|UI(MVC)\\UI(MVC).csproj|d:\\hastanerandevusistemi\\ui(mvc)\\views\\admin\\_appointmentspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B4FCA917-BC05-4F87-AE8A-2EA1F0FFAF76}|UI(MVC)\\UI(MVC).csproj|solutionrelative:ui(mvc)\\views\\admin\\_appointmentspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4FCA917-BC05-4F87-AE8A-2EA1F0FFAF76}|UI(MVC)\\UI(MVC).csproj|d:\\hastanerandevusistemi\\ui(mvc)\\models\\models.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4FCA917-BC05-4F87-AE8A-2EA1F0FFAF76}|UI(MVC)\\UI(MVC).csproj|solutionrelative:ui(mvc)\\models\\models.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4FCA917-BC05-4F87-AE8A-2EA1F0FFAF76}|UI(MVC)\\UI(MVC).csproj|d:\\hastanerandevusistemi\\ui(mvc)\\controllers\\patientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4FCA917-BC05-4F87-AE8A-2EA1F0FFAF76}|UI(MVC)\\UI(MVC).csproj|solutionrelative:ui(mvc)\\controllers\\patientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4FCA917-BC05-4F87-AE8A-2EA1F0FFAF76}|UI(MVC)\\UI(MVC).csproj|d:\\hastanerandevusistemi\\ui(mvc)\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B4FCA917-BC05-4F87-AE8A-2EA1F0FFAF76}|UI(MVC)\\UI(MVC).csproj|solutionrelative:ui(mvc)\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4FCA917-BC05-4F87-AE8A-2EA1F0FFAF76}|UI(MVC)\\UI(MVC).csproj|d:\\hastanerandevusistemi\\ui(mvc)\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4FCA917-BC05-4F87-AE8A-2EA1F0FFAF76}|UI(MVC)\\UI(MVC).csproj|solutionrelative:ui(mvc)\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4FCA917-BC05-4F87-AE8A-2EA1F0FFAF76}|UI(MVC)\\UI(MVC).csproj|d:\\hastanerandevusistemi\\ui(mvc)\\controllers\\doctorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4FCA917-BC05-4F87-AE8A-2EA1F0FFAF76}|UI(MVC)\\UI(MVC).csproj|solutionrelative:ui(mvc)\\controllers\\doctorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4FCA917-BC05-4F87-AE8A-2EA1F0FFAF76}|UI(MVC)\\UI(MVC).csproj|d:\\hastanerandevusistemi\\ui(mvc)\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4FCA917-BC05-4F87-AE8A-2EA1F0FFAF76}|UI(MVC)\\UI(MVC).csproj|solutionrelative:ui(mvc)\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4FCA917-BC05-4F87-AE8A-2EA1F0FFAF76}|UI(MVC)\\UI(MVC).csproj|d:\\hastanerandevusistemi\\ui(mvc)\\views\\admin\\_patientspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B4FCA917-BC05-4F87-AE8A-2EA1F0FFAF76}|UI(MVC)\\UI(MVC).csproj|solutionrelative:ui(mvc)\\views\\admin\\_patientspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FC5BC62-28FA-4C33-BBF7-1180EBAC31DA}|Entities\\Entities.csproj|d:\\hastanerandevusistemi\\entities\\dtos\\patientregisterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FC5BC62-28FA-4C33-BBF7-1180EBAC31DA}|Entities\\Entities.csproj|solutionrelative:entities\\dtos\\patientregisterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FC5BC62-28FA-4C33-BBF7-1180EBAC31DA}|Entities\\Entities.csproj|d:\\hastanerandevusistemi\\entities\\dtos\\patientlogindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FC5BC62-28FA-4C33-BBF7-1180EBAC31DA}|Entities\\Entities.csproj|solutionrelative:entities\\dtos\\patientlogindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FC5BC62-28FA-4C33-BBF7-1180EBAC31DA}|Entities\\Entities.csproj|d:\\hastanerandevusistemi\\entities\\dtos\\patientdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FC5BC62-28FA-4C33-BBF7-1180EBAC31DA}|Entities\\Entities.csproj|solutionrelative:entities\\dtos\\patientdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FC5BC62-28FA-4C33-BBF7-1180EBAC31DA}|Entities\\Entities.csproj|d:\\hastanerandevusistemi\\entities\\dtos\\passwordupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FC5BC62-28FA-4C33-BBF7-1180EBAC31DA}|Entities\\Entities.csproj|solutionrelative:entities\\dtos\\passwordupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FC5BC62-28FA-4C33-BBF7-1180EBAC31DA}|Entities\\Entities.csproj|d:\\hastanerandevusistemi\\entities\\dtos\\doctorregisterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FC5BC62-28FA-4C33-BBF7-1180EBAC31DA}|Entities\\Entities.csproj|solutionrelative:entities\\dtos\\doctorregisterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FC5BC62-28FA-4C33-BBF7-1180EBAC31DA}|Entities\\Entities.csproj|d:\\hastanerandevusistemi\\entities\\dtos\\doctorpasswordupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FC5BC62-28FA-4C33-BBF7-1180EBAC31DA}|Entities\\Entities.csproj|solutionrelative:entities\\dtos\\doctorpasswordupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FC5BC62-28FA-4C33-BBF7-1180EBAC31DA}|Entities\\Entities.csproj|d:\\hastanerandevusistemi\\entities\\dtos\\doctorlogindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FC5BC62-28FA-4C33-BBF7-1180EBAC31DA}|Entities\\Entities.csproj|solutionrelative:entities\\dtos\\doctorlogindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FC5BC62-28FA-4C33-BBF7-1180EBAC31DA}|Entities\\Entities.csproj|d:\\hastanerandevusistemi\\entities\\dtos\\doctordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FC5BC62-28FA-4C33-BBF7-1180EBAC31DA}|Entities\\Entities.csproj|solutionrelative:entities\\dtos\\doctordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FC5BC62-28FA-4C33-BBF7-1180EBAC31DA}|Entities\\Entities.csproj|d:\\hastanerandevusistemi\\entities\\dtos\\appointmentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FC5BC62-28FA-4C33-BBF7-1180EBAC31DA}|Entities\\Entities.csproj|solutionrelative:entities\\dtos\\appointmentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FC5BC62-28FA-4C33-BBF7-1180EBAC31DA}|Entities\\Entities.csproj|d:\\hastanerandevusistemi\\entities\\dtos\\adminlogindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FC5BC62-28FA-4C33-BBF7-1180EBAC31DA}|Entities\\Entities.csproj|solutionrelative:entities\\dtos\\adminlogindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4FCA917-BC05-4F87-AE8A-2EA1F0FFAF76}|UI(MVC)\\UI(MVC).csproj|d:\\hastanerandevusistemi\\ui(mvc)\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B4FCA917-BC05-4F87-AE8A-2EA1F0FFAF76}|UI(MVC)\\UI(MVC).csproj|solutionrelative:ui(mvc)\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4FCA917-BC05-4F87-AE8A-2EA1F0FFAF76}|UI(MVC)\\UI(MVC).csproj|d:\\hastanerandevusistemi\\ui(mvc)\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B4FCA917-BC05-4F87-AE8A-2EA1F0FFAF76}|UI(MVC)\\UI(MVC).csproj|solutionrelative:ui(mvc)\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4FCA917-BC05-4F87-AE8A-2EA1F0FFAF76}|UI(MVC)\\UI(MVC).csproj|d:\\hastanerandevusistemi\\ui(mvc)\\views\\doctor\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B4FCA917-BC05-4F87-AE8A-2EA1F0FFAF76}|UI(MVC)\\UI(MVC).csproj|solutionrelative:ui(mvc)\\views\\doctor\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4FCA917-BC05-4F87-AE8A-2EA1F0FFAF76}|UI(MVC)\\UI(MVC).csproj|d:\\hastanerandevusistemi\\ui(mvc)\\views\\doctor\\_myprofilepartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B4FCA917-BC05-4F87-AE8A-2EA1F0FFAF76}|UI(MVC)\\UI(MVC).csproj|solutionrelative:ui(mvc)\\views\\doctor\\_myprofilepartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA588BC1-AC1B-4FF9-8418-762C624C52C0}|DataAccess\\DataAccess.csproj|d:\\hastanerandevusistemi\\dataaccess\\concrete\\entityframework\\context\\efdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA588BC1-AC1B-4FF9-8418-762C624C52C0}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\concrete\\entityframework\\context\\efdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4FCA917-BC05-4F87-AE8A-2EA1F0FFAF76}|UI(MVC)\\UI(MVC).csproj|d:\\hastanerandevusistemi\\ui(mvc)\\views\\admin\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B4FCA917-BC05-4F87-AE8A-2EA1F0FFAF76}|UI(MVC)\\UI(MVC).csproj|solutionrelative:ui(mvc)\\views\\admin\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\HastaneRandevuSistemi\\WebAPI\\wwwroot\\AdminPanel\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:WebAPI\\wwwroot\\AdminPanel\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\HastaneRandevuSistemi\\WebAPI\\wwwroot\\AdminPanel\\admin-panel.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:WebAPI\\wwwroot\\AdminPanel\\admin-panel.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PatientManager.cs",
+              "DocumentMoniker": "D:\\HastaneRandevuSistemi\\Business\\Concrete\\PatientManager.cs",
+              "RelativeDocumentMoniker": "Business\\Concrete\\PatientManager.cs",
+              "ToolTip": "D:\\HastaneRandevuSistemi\\Business\\Concrete\\PatientManager.cs",
+              "RelativeToolTip": "Business\\Concrete\\PatientManager.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAA3wEgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T19:45:05.698Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DoctorManager.cs",
+              "DocumentMoniker": "D:\\HastaneRandevuSistemi\\Business\\Concrete\\DoctorManager.cs",
+              "RelativeDocumentMoniker": "Business\\Concrete\\DoctorManager.cs",
+              "ToolTip": "D:\\HastaneRandevuSistemi\\Business\\Concrete\\DoctorManager.cs",
+              "RelativeToolTip": "Business\\Concrete\\DoctorManager.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T19:44:57.034Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AppointmentManager.cs",
+              "DocumentMoniker": "D:\\HastaneRandevuSistemi\\Business\\Concrete\\AppointmentManager.cs",
+              "RelativeDocumentMoniker": "Business\\Concrete\\AppointmentManager.cs",
+              "ToolTip": "D:\\HastaneRandevuSistemi\\Business\\Concrete\\AppointmentManager.cs",
+              "RelativeToolTip": "Business\\Concrete\\AppointmentManager.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAIBBwEEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T19:44:45.457Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AdminManager.cs",
+              "DocumentMoniker": "D:\\HastaneRandevuSistemi\\Business\\Concrete\\AdminManager.cs",
+              "RelativeDocumentMoniker": "Business\\Concrete\\AdminManager.cs",
+              "ToolTip": "D:\\HastaneRandevuSistemi\\Business\\Concrete\\AdminManager.cs",
+              "RelativeToolTip": "Business\\Concrete\\AdminManager.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T19:44:42.513Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Models.cs",
+              "DocumentMoniker": "D:\\HastaneRandevuSistemi\\UI(MVC)\\Models\\Models.cs",
+              "RelativeDocumentMoniker": "UI(MVC)\\Models\\Models.cs",
+              "ToolTip": "D:\\HastaneRandevuSistemi\\UI(MVC)\\Models\\Models.cs",
+              "RelativeToolTip": "UI(MVC)\\Models\\Models.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T19:43:10.27Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "PatientController.cs",
+              "DocumentMoniker": "D:\\HastaneRandevuSistemi\\UI(MVC)\\Controllers\\PatientController.cs",
+              "RelativeDocumentMoniker": "UI(MVC)\\Controllers\\PatientController.cs",
+              "ToolTip": "D:\\HastaneRandevuSistemi\\UI(MVC)\\Controllers\\PatientController.cs",
+              "RelativeToolTip": "UI(MVC)\\Controllers\\PatientController.cs",
+              "ViewState": "AgIAALwAAAAAAAAAAAAAAMcAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T19:40:57.99Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\HastaneRandevuSistemi\\UI(MVC)\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "UI(MVC)\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\HastaneRandevuSistemi\\UI(MVC)\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "UI(MVC)\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAoAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T19:40:54.206Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "DoctorController.cs",
+              "DocumentMoniker": "D:\\HastaneRandevuSistemi\\UI(MVC)\\Controllers\\DoctorController.cs",
+              "RelativeDocumentMoniker": "UI(MVC)\\Controllers\\DoctorController.cs",
+              "ToolTip": "D:\\HastaneRandevuSistemi\\UI(MVC)\\Controllers\\DoctorController.cs",
+              "RelativeToolTip": "UI(MVC)\\Controllers\\DoctorController.cs",
+              "ViewState": "AgIAANUAAAAAAAAAAAAgwFcAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T19:40:08.998Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "_AppointmentsPartial.cshtml",
+              "DocumentMoniker": "D:\\HastaneRandevuSistemi\\UI(MVC)\\Views\\Admin\\_AppointmentsPartial.cshtml",
+              "RelativeDocumentMoniker": "UI(MVC)\\Views\\Admin\\_AppointmentsPartial.cshtml",
+              "ToolTip": "D:\\HastaneRandevuSistemi\\UI(MVC)\\Views\\Admin\\_AppointmentsPartial.cshtml",
+              "RelativeToolTip": "UI(MVC)\\Views\\Admin\\_AppointmentsPartial.cshtml",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAzwAkAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-04T15:23:19.557Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "D:\\HastaneRandevuSistemi\\WebAPI\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Controllers\\AdminController.cs",
+              "ToolTip": "D:\\HastaneRandevuSistemi\\WebAPI\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "WebAPI\\Controllers\\AdminController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-04T16:04:49.251Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AppointmentController.cs",
+              "DocumentMoniker": "D:\\HastaneRandevuSistemi\\WebAPI\\Controllers\\AppointmentController.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Controllers\\AppointmentController.cs",
+              "ToolTip": "D:\\HastaneRandevuSistemi\\WebAPI\\Controllers\\AppointmentController.cs",
+              "RelativeToolTip": "WebAPI\\Controllers\\AppointmentController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T09:02:02.325Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DoctorController.cs",
+              "DocumentMoniker": "D:\\HastaneRandevuSistemi\\WebAPI\\Controllers\\DoctorController.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Controllers\\DoctorController.cs",
+              "ToolTip": "D:\\HastaneRandevuSistemi\\WebAPI\\Controllers\\DoctorController.cs",
+              "RelativeToolTip": "WebAPI\\Controllers\\DoctorController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-04T15:29:15.095Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PatientController.cs",
+              "DocumentMoniker": "D:\\HastaneRandevuSistemi\\WebAPI\\Controllers\\PatientController.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Controllers\\PatientController.cs",
+              "ToolTip": "D:\\HastaneRandevuSistemi\\WebAPI\\Controllers\\PatientController.cs",
+              "RelativeToolTip": "WebAPI\\Controllers\\PatientController.cs",
+              "ViewState": "AgIAAIgAAAAAAAAAAAAAABgAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-04T15:30:28.649Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "PatientRegisterDto.cs",
+              "DocumentMoniker": "D:\\HastaneRandevuSistemi\\Entities\\DTOs\\PatientRegisterDto.cs",
+              "RelativeDocumentMoniker": "Entities\\DTOs\\PatientRegisterDto.cs",
+              "ToolTip": "D:\\HastaneRandevuSistemi\\Entities\\DTOs\\PatientRegisterDto.cs",
+              "RelativeToolTip": "Entities\\DTOs\\PatientRegisterDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T19:30:31.038Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "AdminLoginDto.cs",
+              "DocumentMoniker": "D:\\HastaneRandevuSistemi\\Entities\\DTOs\\AdminLoginDto.cs",
+              "RelativeDocumentMoniker": "Entities\\DTOs\\AdminLoginDto.cs",
+              "ToolTip": "D:\\HastaneRandevuSistemi\\Entities\\DTOs\\AdminLoginDto.cs",
+              "RelativeToolTip": "Entities\\DTOs\\AdminLoginDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T19:30:01.401Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "AppointmentDto.cs",
+              "DocumentMoniker": "D:\\HastaneRandevuSistemi\\Entities\\DTOs\\AppointmentDto.cs",
+              "RelativeDocumentMoniker": "Entities\\DTOs\\AppointmentDto.cs",
+              "ToolTip": "D:\\HastaneRandevuSistemi\\Entities\\DTOs\\AppointmentDto.cs",
+              "RelativeToolTip": "Entities\\DTOs\\AppointmentDto.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAiwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T19:30:03.7Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "DoctorDto.cs",
+              "DocumentMoniker": "D:\\HastaneRandevuSistemi\\Entities\\DTOs\\DoctorDto.cs",
+              "RelativeDocumentMoniker": "Entities\\DTOs\\DoctorDto.cs",
+              "ToolTip": "D:\\HastaneRandevuSistemi\\Entities\\DTOs\\DoctorDto.cs",
+              "RelativeToolTip": "Entities\\DTOs\\DoctorDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T19:30:09.488Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "DoctorLoginDto.cs",
+              "DocumentMoniker": "D:\\HastaneRandevuSistemi\\Entities\\DTOs\\DoctorLoginDto.cs",
+              "RelativeDocumentMoniker": "Entities\\DTOs\\DoctorLoginDto.cs",
+              "ToolTip": "D:\\HastaneRandevuSistemi\\Entities\\DTOs\\DoctorLoginDto.cs",
+              "RelativeToolTip": "Entities\\DTOs\\DoctorLoginDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T19:30:12.24Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "DoctorPasswordUpdateDto.cs",
+              "DocumentMoniker": "D:\\HastaneRandevuSistemi\\Entities\\DTOs\\DoctorPasswordUpdateDto.cs",
+              "RelativeDocumentMoniker": "Entities\\DTOs\\DoctorPasswordUpdateDto.cs",
+              "ToolTip": "D:\\HastaneRandevuSistemi\\Entities\\DTOs\\DoctorPasswordUpdateDto.cs",
+              "RelativeToolTip": "Entities\\DTOs\\DoctorPasswordUpdateDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T19:30:14.63Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\HastaneRandevuSistemi\\UI(MVC)\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "UI(MVC)\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\HastaneRandevuSistemi\\UI(MVC)\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "UI(MVC)\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAABUAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-12T17:38:53.514Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "_PatientsPartial.cshtml",
+              "DocumentMoniker": "D:\\HastaneRandevuSistemi\\UI(MVC)\\Views\\Admin\\_PatientsPartial.cshtml",
+              "RelativeDocumentMoniker": "UI(MVC)\\Views\\Admin\\_PatientsPartial.cshtml",
+              "ToolTip": "D:\\HastaneRandevuSistemi\\UI(MVC)\\Views\\Admin\\_PatientsPartial.cshtml",
+              "RelativeToolTip": "UI(MVC)\\Views\\Admin\\_PatientsPartial.cshtml",
+              "ViewState": "AgIAAIEAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-04T15:30:24.609Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "D:\\HastaneRandevuSistemi\\UI(MVC)\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "UI(MVC)\\Controllers\\AdminController.cs",
+              "ToolTip": "D:\\HastaneRandevuSistemi\\UI(MVC)\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "UI(MVC)\\Controllers\\AdminController.cs",
+              "ViewState": "AgIAAMoAAAAAAAAAAAAqwNkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-04T15:28:58.305Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "DoctorRegisterDto.cs",
+              "DocumentMoniker": "D:\\HastaneRandevuSistemi\\Entities\\DTOs\\DoctorRegisterDto.cs",
+              "RelativeDocumentMoniker": "Entities\\DTOs\\DoctorRegisterDto.cs",
+              "ToolTip": "D:\\HastaneRandevuSistemi\\Entities\\DTOs\\DoctorRegisterDto.cs",
+              "RelativeToolTip": "Entities\\DTOs\\DoctorRegisterDto.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T19:30:22.906Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "PasswordUpdateDto.cs",
+              "DocumentMoniker": "D:\\HastaneRandevuSistemi\\Entities\\DTOs\\PasswordUpdateDto.cs",
+              "RelativeDocumentMoniker": "Entities\\DTOs\\PasswordUpdateDto.cs",
+              "ToolTip": "D:\\HastaneRandevuSistemi\\Entities\\DTOs\\PasswordUpdateDto.cs",
+              "RelativeToolTip": "Entities\\DTOs\\PasswordUpdateDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T19:30:25.581Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "PatientDto.cs",
+              "DocumentMoniker": "D:\\HastaneRandevuSistemi\\Entities\\DTOs\\PatientDto.cs",
+              "RelativeDocumentMoniker": "Entities\\DTOs\\PatientDto.cs",
+              "ToolTip": "D:\\HastaneRandevuSistemi\\Entities\\DTOs\\PatientDto.cs",
+              "RelativeToolTip": "Entities\\DTOs\\PatientDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T19:30:27.949Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "PatientLoginDto.cs",
+              "DocumentMoniker": "D:\\HastaneRandevuSistemi\\Entities\\DTOs\\PatientLoginDto.cs",
+              "RelativeDocumentMoniker": "Entities\\DTOs\\PatientLoginDto.cs",
+              "ToolTip": "D:\\HastaneRandevuSistemi\\Entities\\DTOs\\PatientLoginDto.cs",
+              "RelativeToolTip": "Entities\\DTOs\\PatientLoginDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T19:30:29.746Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\HastaneRandevuSistemi\\UI(MVC)\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "UI(MVC)\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\HastaneRandevuSistemi\\UI(MVC)\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "UI(MVC)\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-12T17:39:03.608Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Privacy.cshtml",
+              "DocumentMoniker": "D:\\HastaneRandevuSistemi\\UI(MVC)\\Views\\Home\\Privacy.cshtml",
+              "RelativeDocumentMoniker": "UI(MVC)\\Views\\Home\\Privacy.cshtml",
+              "ToolTip": "D:\\HastaneRandevuSistemi\\UI(MVC)\\Views\\Home\\Privacy.cshtml",
+              "RelativeToolTip": "UI(MVC)\\Views\\Home\\Privacy.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-12T17:39:00.499Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "style.css",
+              "DocumentMoniker": "D:\\HastaneRandevuSistemi\\WebAPI\\wwwroot\\AdminPanel\\css\\style.css",
+              "RelativeDocumentMoniker": "WebAPI\\wwwroot\\AdminPanel\\css\\style.css",
+              "ToolTip": "D:\\HastaneRandevuSistemi\\WebAPI\\wwwroot\\AdminPanel\\css\\style.css",
+              "RelativeToolTip": "WebAPI\\wwwroot\\AdminPanel\\css\\style.css",
+              "ViewState": "AgIAAC0AAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-09-12T17:39:52.149Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "admin-panel.html",
+              "DocumentMoniker": "D:\\HastaneRandevuSistemi\\WebAPI\\wwwroot\\AdminPanel\\admin-panel.html",
+              "RelativeDocumentMoniker": "WebAPI\\wwwroot\\AdminPanel\\admin-panel.html",
+              "ToolTip": "D:\\HastaneRandevuSistemi\\WebAPI\\wwwroot\\AdminPanel\\admin-panel.html",
+              "RelativeToolTip": "WebAPI\\wwwroot\\AdminPanel\\admin-panel.html",
+              "ViewState": "AgIAAPQCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-09-12T17:39:22.654Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "_MyProfilePartial.cshtml",
+              "DocumentMoniker": "D:\\HastaneRandevuSistemi\\UI(MVC)\\Views\\Doctor\\_MyProfilePartial.cshtml",
+              "RelativeDocumentMoniker": "UI(MVC)\\Views\\Doctor\\_MyProfilePartial.cshtml",
+              "ToolTip": "D:\\HastaneRandevuSistemi\\UI(MVC)\\Views\\Doctor\\_MyProfilePartial.cshtml",
+              "RelativeToolTip": "UI(MVC)\\Views\\Doctor\\_MyProfilePartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-12T08:54:36.576Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Dashboard.cshtml",
+              "DocumentMoniker": "D:\\HastaneRandevuSistemi\\UI(MVC)\\Views\\Doctor\\Dashboard.cshtml",
+              "RelativeDocumentMoniker": "UI(MVC)\\Views\\Doctor\\Dashboard.cshtml",
+              "ToolTip": "D:\\HastaneRandevuSistemi\\UI(MVC)\\Views\\Doctor\\Dashboard.cshtml",
+              "RelativeToolTip": "UI(MVC)\\Views\\Doctor\\Dashboard.cshtml",
+              "ViewState": "AgIAAG8AAAAAAAAAAAA3wHsAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-12T08:53:54.249Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "EfDbContext.cs",
+              "DocumentMoniker": "D:\\HastaneRandevuSistemi\\DataAccess\\Concrete\\EntityFramework\\Context\\EfDbContext.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Concrete\\EntityFramework\\Context\\EfDbContext.cs",
+              "ToolTip": "D:\\HastaneRandevuSistemi\\DataAccess\\Concrete\\EntityFramework\\Context\\EfDbContext.cs",
+              "RelativeToolTip": "DataAccess\\Concrete\\EntityFramework\\Context\\EfDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvxAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-06T09:16:34.354Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Dashboard.cshtml",
+              "DocumentMoniker": "D:\\HastaneRandevuSistemi\\UI(MVC)\\Views\\Admin\\Dashboard.cshtml",
+              "RelativeDocumentMoniker": "UI(MVC)\\Views\\Admin\\Dashboard.cshtml",
+              "ToolTip": "D:\\HastaneRandevuSistemi\\UI(MVC)\\Views\\Admin\\Dashboard.cshtml",
+              "RelativeToolTip": "UI(MVC)\\Views\\Admin\\Dashboard.cshtml",
+              "ViewState": "AgIAAPUAAAAAAAAAAAAAAAUBAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-04T15:23:54.492Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

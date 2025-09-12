@@ -85,7 +85,7 @@ namespace UI_MVC_.Controllers
                 
                 var errorContent = await response.Content.ReadAsStringAsync();
                 
-                // Eğer "Böyle bir kişi zaten mevcut!" hatası ise özel mesaj göster
+                // Eğer böyle bir kişi zaten mevcut hatası ise özel mesaj göster
                 if (errorContent.Contains("Böyle bir kişi zaten mevcut"))
                 {
                     ViewBag.Error = "Böyle bir kişi zaten mevcut! Lütfen farklı bilgiler girin.";

@@ -1,0 +1,266 @@
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\appsettings.Development.json
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\appsettings.json
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\WebAPI.staticwebassets.runtime.json
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\WebAPI.staticwebassets.endpoints.json
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\WebAPI.exe
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\WebAPI.deps.json
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\WebAPI.runtimeconfig.json
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\WebAPI.dll
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\WebAPI.pdb
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Azure.Core.dll
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Azure.Identity.dll
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Microsoft.AspNetCore.OpenApi.dll
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Microsoft.Data.SqlClient.dll
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.dll
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Microsoft.Identity.Client.dll
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Microsoft.OpenApi.dll
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Microsoft.SqlServer.Server.dll
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Microsoft.Win32.SystemEvents.dll
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Scalar.AspNetCore.dll
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\System.ClientModel.dll
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\System.Configuration.ConfigurationManager.dll
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\System.Drawing.Common.dll
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\System.Memory.Data.dll
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\System.Runtime.Caching.dll
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\System.Security.Cryptography.ProtectedData.dll
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\System.Security.Permissions.dll
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\System.Windows.Extensions.dll
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Business.dll
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Core.dll
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\DataAccess.dll
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Entities.dll
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Business.pdb
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Core.pdb
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\DataAccess.pdb
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Entities.pdb
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\WebAPI.csproj.AssemblyReference.cache
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\rpswa.dswa.cache.json
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\WebAPI.GeneratedMSBuildEditorConfig.editorconfig
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\WebAPI.AssemblyInfoInputs.cache
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\WebAPI.AssemblyInfo.cs
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\WebAPI.csproj.CoreCompileInputs.cache
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\WebAPI.MvcApplicationPartsAssemblyInfo.cs
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\WebAPI.MvcApplicationPartsAssemblyInfo.cache
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\rjimswa.dswa.cache.json
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\scopedcss\bundle\WebAPI.styles.css
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\compressed\2ba5c50rso-w0wslot2f9.gz
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\compressed\r1cjt9dgju-bh0p9hlp1j.gz
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\compressed\uudzb0pqsb-skzds47lpt.gz
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\compressed\rbe6zq3dww-qn7oy7ygcg.gz
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\staticwebassets.build.json
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\staticwebassets.build.json.cache
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\staticwebassets.development.json
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\staticwebassets.build.endpoints.json
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\WebAPI.csproj.Up2Date
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\WebAPI.dll
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\refint\WebAPI.dll
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\WebAPI.pdb
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\WebAPI.genruntimeconfig.cache
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\ref\WebAPI.dll
+D:\Cursor\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\appsettings.Development.json
+D:\Cursor\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\appsettings.json
+D:\Cursor\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\WebAPI.staticwebassets.endpoints.json
+D:\Cursor\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\WebAPI.staticwebassets.runtime.json
+D:\Cursor\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\WebAPI.exe
+D:\Cursor\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\WebAPI.deps.json
+D:\Cursor\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\WebAPI.runtimeconfig.json
+D:\Cursor\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\WebAPI.dll
+D:\Cursor\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\WebAPI.pdb
+D:\Cursor\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Azure.Core.dll
+D:\Cursor\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Azure.Identity.dll
+D:\Cursor\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Microsoft.AspNetCore.OpenApi.dll
+D:\Cursor\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Cursor\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Microsoft.Data.SqlClient.dll
+D:\Cursor\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.dll
+D:\Cursor\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Cursor\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Cursor\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\Cursor\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Microsoft.Identity.Client.dll
+D:\Cursor\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\Cursor\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Cursor\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Cursor\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
+D:\Cursor\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
+D:\Cursor\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Cursor\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+D:\Cursor\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Microsoft.OpenApi.dll
+D:\Cursor\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Microsoft.SqlServer.Server.dll
+D:\Cursor\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Microsoft.Win32.SystemEvents.dll
+D:\Cursor\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Scalar.AspNetCore.dll
+D:\Cursor\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Cursor\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Cursor\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Cursor\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\System.ClientModel.dll
+D:\Cursor\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\System.Configuration.ConfigurationManager.dll
+D:\Cursor\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\System.Drawing.Common.dll
+D:\Cursor\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Cursor\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\System.Memory.Data.dll
+D:\Cursor\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\System.Runtime.Caching.dll
+D:\Cursor\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\System.Security.Cryptography.ProtectedData.dll
+D:\Cursor\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\System.Security.Permissions.dll
+D:\Cursor\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\System.Windows.Extensions.dll
+D:\Cursor\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\Cursor\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\Cursor\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Cursor\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Cursor\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Cursor\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Cursor\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\Cursor\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+D:\Cursor\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+D:\Cursor\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+D:\Cursor\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\Cursor\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+D:\Cursor\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Business.dll
+D:\Cursor\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Core.dll
+D:\Cursor\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\DataAccess.dll
+D:\Cursor\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Entities.dll
+D:\Cursor\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Business.pdb
+D:\Cursor\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Core.pdb
+D:\Cursor\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\DataAccess.pdb
+D:\Cursor\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Entities.pdb
+D:\Cursor\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\WebAPI.csproj.AssemblyReference.cache
+D:\Cursor\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\rpswa.dswa.cache.json
+D:\Cursor\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\WebAPI.GeneratedMSBuildEditorConfig.editorconfig
+D:\Cursor\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\WebAPI.AssemblyInfoInputs.cache
+D:\Cursor\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\WebAPI.AssemblyInfo.cs
+D:\Cursor\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\WebAPI.csproj.CoreCompileInputs.cache
+D:\Cursor\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\WebAPI.MvcApplicationPartsAssemblyInfo.cs
+D:\Cursor\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\WebAPI.MvcApplicationPartsAssemblyInfo.cache
+D:\Cursor\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\rjimswa.dswa.cache.json
+D:\Cursor\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
+D:\Cursor\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
+D:\Cursor\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\scopedcss\bundle\WebAPI.styles.css
+D:\Cursor\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\compressed\2ba5c50rso-w0wslot2f9.gz
+D:\Cursor\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\compressed\r1cjt9dgju-bh0p9hlp1j.gz
+D:\Cursor\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\compressed\uudzb0pqsb-skzds47lpt.gz
+D:\Cursor\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\compressed\rbe6zq3dww-qn7oy7ygcg.gz
+D:\Cursor\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\staticwebassets.build.json
+D:\Cursor\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\staticwebassets.build.json.cache
+D:\Cursor\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\staticwebassets.development.json
+D:\Cursor\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\staticwebassets.build.endpoints.json
+D:\Cursor\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\WebAPI.csproj.Up2Date
+D:\Cursor\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\WebAPI.dll
+D:\Cursor\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\refint\WebAPI.dll
+D:\Cursor\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\WebAPI.pdb
+D:\Cursor\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\WebAPI.genruntimeconfig.cache
+D:\Cursor\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\ref\WebAPI.dll
+D:\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\appsettings.Development.json
+D:\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\appsettings.json
+D:\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\WebAPI.staticwebassets.endpoints.json
+D:\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\WebAPI.staticwebassets.runtime.json
+D:\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\WebAPI.exe
+D:\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\WebAPI.deps.json
+D:\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\WebAPI.runtimeconfig.json
+D:\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\WebAPI.dll
+D:\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\WebAPI.pdb
+D:\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Azure.Core.dll
+D:\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Azure.Identity.dll
+D:\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Microsoft.AspNetCore.OpenApi.dll
+D:\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Microsoft.Data.SqlClient.dll
+D:\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.dll
+D:\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Microsoft.Identity.Client.dll
+D:\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
+D:\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
+D:\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
+D:\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+D:\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Microsoft.OpenApi.dll
+D:\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Microsoft.SqlServer.Server.dll
+D:\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Microsoft.Win32.SystemEvents.dll
+D:\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Scalar.AspNetCore.dll
+D:\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\System.ClientModel.dll
+D:\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\System.Configuration.ConfigurationManager.dll
+D:\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\System.Drawing.Common.dll
+D:\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
+D:\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\System.Memory.Data.dll
+D:\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\System.Runtime.Caching.dll
+D:\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\System.Security.Cryptography.ProtectedData.dll
+D:\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\System.Security.Permissions.dll
+D:\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\System.Windows.Extensions.dll
+D:\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+D:\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+D:\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+D:\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+D:\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Business.dll
+D:\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Core.dll
+D:\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\DataAccess.dll
+D:\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Entities.dll
+D:\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Business.pdb
+D:\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Core.pdb
+D:\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\DataAccess.pdb
+D:\HastaneRandevuSistemi\WebAPI\bin\Debug\net9.0\Entities.pdb
+D:\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\WebAPI.csproj.AssemblyReference.cache
+D:\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\rpswa.dswa.cache.json
+D:\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\WebAPI.GeneratedMSBuildEditorConfig.editorconfig
+D:\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\WebAPI.AssemblyInfoInputs.cache
+D:\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\WebAPI.AssemblyInfo.cs
+D:\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\WebAPI.csproj.CoreCompileInputs.cache
+D:\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\WebAPI.MvcApplicationPartsAssemblyInfo.cs
+D:\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\WebAPI.MvcApplicationPartsAssemblyInfo.cache
+D:\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\rjimswa.dswa.cache.json
+D:\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
+D:\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
+D:\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\scopedcss\bundle\WebAPI.styles.css
+D:\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\compressed\2ba5c50rso-w0wslot2f9.gz
+D:\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\compressed\r1cjt9dgju-bh0p9hlp1j.gz
+D:\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\compressed\uudzb0pqsb-skzds47lpt.gz
+D:\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\compressed\rbe6zq3dww-qn7oy7ygcg.gz
+D:\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\staticwebassets.build.json
+D:\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\staticwebassets.build.json.cache
+D:\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\staticwebassets.development.json
+D:\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\staticwebassets.build.endpoints.json
+D:\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+D:\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\WebAPI.csproj.Up2Date
+D:\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\WebAPI.dll
+D:\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\refint\WebAPI.dll
+D:\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\WebAPI.pdb
+D:\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\WebAPI.genruntimeconfig.cache
+D:\HastaneRandevuSistemi\WebAPI\obj\Debug\net9.0\ref\WebAPI.dll

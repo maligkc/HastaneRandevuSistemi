@@ -1,0 +1,36 @@
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\Core\bin\Debug\net9.0\Core.deps.json
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\Core\bin\Debug\net9.0\Core.dll
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\Core\bin\Debug\net9.0\Core.pdb
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\Core\obj\Debug\net9.0\Core.csproj.AssemblyReference.cache
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\Core\obj\Debug\net9.0\Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\Core\obj\Debug\net9.0\Core.AssemblyInfoInputs.cache
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\Core\obj\Debug\net9.0\Core.AssemblyInfo.cs
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\Core\obj\Debug\net9.0\Core.csproj.CoreCompileInputs.cache
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\Core\obj\Debug\net9.0\Core.dll
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\Core\obj\Debug\net9.0\refint\Core.dll
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\Core\obj\Debug\net9.0\Core.pdb
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\Core\obj\Debug\net9.0\ref\Core.dll
+D:\Cursor\HastaneRandevuSistemi\Core\bin\Debug\net9.0\Core.deps.json
+D:\Cursor\HastaneRandevuSistemi\Core\bin\Debug\net9.0\Core.dll
+D:\Cursor\HastaneRandevuSistemi\Core\bin\Debug\net9.0\Core.pdb
+D:\Cursor\HastaneRandevuSistemi\Core\obj\Debug\net9.0\Core.csproj.AssemblyReference.cache
+D:\Cursor\HastaneRandevuSistemi\Core\obj\Debug\net9.0\Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Cursor\HastaneRandevuSistemi\Core\obj\Debug\net9.0\Core.AssemblyInfoInputs.cache
+D:\Cursor\HastaneRandevuSistemi\Core\obj\Debug\net9.0\Core.AssemblyInfo.cs
+D:\Cursor\HastaneRandevuSistemi\Core\obj\Debug\net9.0\Core.csproj.CoreCompileInputs.cache
+D:\Cursor\HastaneRandevuSistemi\Core\obj\Debug\net9.0\Core.dll
+D:\Cursor\HastaneRandevuSistemi\Core\obj\Debug\net9.0\refint\Core.dll
+D:\Cursor\HastaneRandevuSistemi\Core\obj\Debug\net9.0\Core.pdb
+D:\Cursor\HastaneRandevuSistemi\Core\obj\Debug\net9.0\ref\Core.dll
+D:\HastaneRandevuSistemi\Core\bin\Debug\net9.0\Core.deps.json
+D:\HastaneRandevuSistemi\Core\bin\Debug\net9.0\Core.dll
+D:\HastaneRandevuSistemi\Core\bin\Debug\net9.0\Core.pdb
+D:\HastaneRandevuSistemi\Core\obj\Debug\net9.0\Core.csproj.AssemblyReference.cache
+D:\HastaneRandevuSistemi\Core\obj\Debug\net9.0\Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\HastaneRandevuSistemi\Core\obj\Debug\net9.0\Core.AssemblyInfoInputs.cache
+D:\HastaneRandevuSistemi\Core\obj\Debug\net9.0\Core.AssemblyInfo.cs
+D:\HastaneRandevuSistemi\Core\obj\Debug\net9.0\Core.csproj.CoreCompileInputs.cache
+D:\HastaneRandevuSistemi\Core\obj\Debug\net9.0\Core.dll
+D:\HastaneRandevuSistemi\Core\obj\Debug\net9.0\refint\Core.dll
+D:\HastaneRandevuSistemi\Core\obj\Debug\net9.0\Core.pdb
+D:\HastaneRandevuSistemi\Core\obj\Debug\net9.0\ref\Core.dll

@@ -1,0 +1,57 @@
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\Business\bin\Debug\net9.0\Business.deps.json
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\Business\bin\Debug\net9.0\Business.dll
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\Business\bin\Debug\net9.0\Business.pdb
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\Business\bin\Debug\net9.0\Core.dll
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\Business\bin\Debug\net9.0\DataAccess.dll
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\Business\bin\Debug\net9.0\Entities.dll
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\Business\bin\Debug\net9.0\DataAccess.pdb
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\Business\bin\Debug\net9.0\Entities.pdb
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\Business\bin\Debug\net9.0\Core.pdb
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\Business\obj\Debug\net9.0\Business.csproj.AssemblyReference.cache
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\Business\obj\Debug\net9.0\Business.GeneratedMSBuildEditorConfig.editorconfig
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\Business\obj\Debug\net9.0\Business.AssemblyInfoInputs.cache
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\Business\obj\Debug\net9.0\Business.AssemblyInfo.cs
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\Business\obj\Debug\net9.0\Business.csproj.CoreCompileInputs.cache
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\Business\obj\Debug\net9.0\Business.csproj.Up2Date
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\Business\obj\Debug\net9.0\Business.dll
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\Business\obj\Debug\net9.0\refint\Business.dll
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\Business\obj\Debug\net9.0\Business.pdb
+D:\Visual Studio Kodlar\HastaneRandevuSistemi\Business\obj\Debug\net9.0\ref\Business.dll
+D:\Cursor\HastaneRandevuSistemi\Business\bin\Debug\net9.0\Business.deps.json
+D:\Cursor\HastaneRandevuSistemi\Business\bin\Debug\net9.0\Business.dll
+D:\Cursor\HastaneRandevuSistemi\Business\bin\Debug\net9.0\Business.pdb
+D:\Cursor\HastaneRandevuSistemi\Business\bin\Debug\net9.0\Core.dll
+D:\Cursor\HastaneRandevuSistemi\Business\bin\Debug\net9.0\DataAccess.dll
+D:\Cursor\HastaneRandevuSistemi\Business\bin\Debug\net9.0\Entities.dll
+D:\Cursor\HastaneRandevuSistemi\Business\bin\Debug\net9.0\DataAccess.pdb
+D:\Cursor\HastaneRandevuSistemi\Business\bin\Debug\net9.0\Entities.pdb
+D:\Cursor\HastaneRandevuSistemi\Business\bin\Debug\net9.0\Core.pdb
+D:\Cursor\HastaneRandevuSistemi\Business\obj\Debug\net9.0\Business.csproj.AssemblyReference.cache
+D:\Cursor\HastaneRandevuSistemi\Business\obj\Debug\net9.0\Business.GeneratedMSBuildEditorConfig.editorconfig
+D:\Cursor\HastaneRandevuSistemi\Business\obj\Debug\net9.0\Business.AssemblyInfoInputs.cache
+D:\Cursor\HastaneRandevuSistemi\Business\obj\Debug\net9.0\Business.AssemblyInfo.cs
+D:\Cursor\HastaneRandevuSistemi\Business\obj\Debug\net9.0\Business.csproj.CoreCompileInputs.cache
+D:\Cursor\HastaneRandevuSistemi\Business\obj\Debug\net9.0\Business.csproj.Up2Date
+D:\Cursor\HastaneRandevuSistemi\Business\obj\Debug\net9.0\Business.dll
+D:\Cursor\HastaneRandevuSistemi\Business\obj\Debug\net9.0\refint\Business.dll
+D:\Cursor\HastaneRandevuSistemi\Business\obj\Debug\net9.0\Business.pdb
+D:\Cursor\HastaneRandevuSistemi\Business\obj\Debug\net9.0\ref\Business.dll
+D:\HastaneRandevuSistemi\Business\bin\Debug\net9.0\Business.deps.json
+D:\HastaneRandevuSistemi\Business\bin\Debug\net9.0\Business.dll
+D:\HastaneRandevuSistemi\Business\bin\Debug\net9.0\Business.pdb
+D:\HastaneRandevuSistemi\Business\bin\Debug\net9.0\Core.dll
+D:\HastaneRandevuSistemi\Business\bin\Debug\net9.0\DataAccess.dll
+D:\HastaneRandevuSistemi\Business\bin\Debug\net9.0\Entities.dll
+D:\HastaneRandevuSistemi\Business\bin\Debug\net9.0\DataAccess.pdb
+D:\HastaneRandevuSistemi\Business\bin\Debug\net9.0\Entities.pdb
+D:\HastaneRandevuSistemi\Business\bin\Debug\net9.0\Core.pdb
+D:\HastaneRandevuSistemi\Business\obj\Debug\net9.0\Business.csproj.AssemblyReference.cache
+D:\HastaneRandevuSistemi\Business\obj\Debug\net9.0\Business.GeneratedMSBuildEditorConfig.editorconfig
+D:\HastaneRandevuSistemi\Business\obj\Debug\net9.0\Business.AssemblyInfoInputs.cache
+D:\HastaneRandevuSistemi\Business\obj\Debug\net9.0\Business.AssemblyInfo.cs
+D:\HastaneRandevuSistemi\Business\obj\Debug\net9.0\Business.csproj.CoreCompileInputs.cache
+D:\HastaneRandevuSistemi\Business\obj\Debug\net9.0\Business.csproj.Up2Date
+D:\HastaneRandevuSistemi\Business\obj\Debug\net9.0\Business.dll
+D:\HastaneRandevuSistemi\Business\obj\Debug\net9.0\refint\Business.dll
+D:\HastaneRandevuSistemi\Business\obj\Debug\net9.0\Business.pdb
+D:\HastaneRandevuSistemi\Business\obj\Debug\net9.0\ref\Business.dll

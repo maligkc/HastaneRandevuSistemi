@@ -1,0 +1,8 @@
+D:\HastaneRandevuSistemi\WebAPI\wwwroot\AdminPanel\admin-panel.html
+D:\HastaneRandevuSistemi\WebAPI\wwwroot\AdminPanel\css\style.css
+D:\HastaneRandevuSistemi\WebAPI\wwwroot\AdminPanel\js\app.js
+D:\HastaneRandevuSistemi\WebAPI\wwwroot\AdminPanel\index.html
+wwwroot\AdminPanel\admin-panel.html
+wwwroot\AdminPanel\css\style.css
+wwwroot\AdminPanel\index.html
+wwwroot\AdminPanel\js\app.js

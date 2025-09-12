@@ -192,7 +192,7 @@ namespace UI_MVC_.Controllers
         {
             try
             {
-                // Body göndermeye gerek yok, id URL'de
+                
                 var response = await _httpClient.DeleteAsync($"Doctor/deleteDoctor/{id}");
 
                 if (response.IsSuccessStatusCode)
@@ -216,37 +216,6 @@ namespace UI_MVC_.Controllers
         
 
 
-
-        //public async Task<IActionResult> Dashboard()
-        //{
-        //    var model = new DashboardViewModel();
-
-        //    // Randevular
-        //    var appointmentsResponse = await _httpClient.GetAsync("Appointment/getAllAppointments");
-        //    if (appointmentsResponse.IsSuccessStatusCode)
-        //    {
-        //        var json = await appointmentsResponse.Content.ReadAsStringAsync();
-        //        model.Appointments = JsonConvert.DeserializeObject<List<Appointment>>(json);
-        //    }
-
-        //    // Hastalar
-        //    var patientsResponse = await _httpClient.GetAsync("Patient/getAllPatients");
-        //    if (patientsResponse.IsSuccessStatusCode)
-        //    {
-        //        var json = await patientsResponse.Content.ReadAsStringAsync();
-        //        model.Patients = JsonConvert.DeserializeObject<List<Patient>>(json);
-        //    }
-
-        //    // Doktorlar
-        //    var doctorsResponse = await _httpClient.GetAsync("Doctor/getAllDoctors");
-        //    if (doctorsResponse.IsSuccessStatusCode)
-        //    {
-        //        var json = await doctorsResponse.Content.ReadAsStringAsync();
-        //        model.Doctors = JsonConvert.DeserializeObject<List<Doctor>>(json);
-        //    }
-
-        //    return View(model);
-        //}
 
     }
 }

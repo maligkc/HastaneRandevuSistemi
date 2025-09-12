@@ -64,9 +64,5 @@ namespace Business.Concrete
         {
             _appointmentDal.Update(appointment);
         }
-        //public void Update(AppointmentDto appointmentDto)
-        //{
-        //    _appointmentDal.Update(appointmentDto);
-        //}
     }
 }

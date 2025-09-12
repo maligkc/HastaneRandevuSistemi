@@ -85,7 +85,6 @@ namespace UI_MVC_.Controllers
                 
                 var errorContent = await response.Content.ReadAsStringAsync();
                 
-                // Eğer "Böyle bir kişi zaten mevcut!" hatası ise özel mesaj göster
                 if (errorContent.Contains("Böyle bir kişi zaten mevcut"))
                 {
                     ViewBag.Error = "Böyle bir kişi zaten mevcut! Lütfen farklı bilgiler girin.";
@@ -204,7 +203,7 @@ namespace UI_MVC_.Controllers
             }
 
             appointment.PatientId = int.Parse(patientId);
-            appointment.AppointmentStatus = 1; // Randevu durumunu otomatik olarak 1 (Aktif) olarak ayarla
+            appointment.AppointmentStatus = 1; // Randevu durumunu otomatik olarak 1 (Aktif) -1 (iptal silinmiş)
 
             var jsonData = JsonConvert.SerializeObject(appointment);
             var content = new StringContent(jsonData, Encoding.UTF8, "application/json");
