@@ -1,0 +1,82 @@
+﻿@using Entities.DTOs
+@* @model AdminLoginDto
+
+
+
+<div class="container">
+    <h2>Admin Girişi</h2>
+    <form asp-action="Login" method="post">
+        <div class="form-group m-4 p-4">
+            <label>Email</label>
+            <input asp-for="AdminEmail" class="form-control" />
+        </div>
+        <div class="form-group m-2">
+            <label>Şifre</label>
+            <input asp-for="AdminPassword" type="password" class="form-control" />
+        </div>
+        <button type="submit" class="btn btn-primary">Giriş Yap</button>
+
+    </form>
+
+</div>
+
+
+@if (ViewBag.Error != null)
+{
+    <div class="alert alert-danger mt-2">@ViewBag.Error</div>    
+}
+ *@
+
+@model AdminLoginDto
+
+<div class="d-flex justify-content-center align-items-center vh-100">
+    <div class="card shadow-lg" style="width: 400px;">
+        <div class="card-body">
+            <h3 class="text-center mb-4">Admin Girişi</h3>
+            <form asp-action="Login" method="post">
+                <div class="mb-3">
+                    <label class="form-label">Email</label>
+                    <input asp-for="AdminEmail" class="form-control" />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Şifre</label>
+                    <div class="input-group">
+                        <input asp-for="AdminPassword" id="adminLoginPassword" type="password" class="form-control" />
+                        <button class="btn btn-outline-secondary" type="button" id="toggleAdminLoginPassword">
+                            <i class="fas fa-eye" id="toggleAdminLoginIcon"></i>
+                        </button>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Giriş Yap</button>
+            </form>
+
+            @if (ViewBag.Error != null)
+            {
+                <div class="alert alert-danger mt-3">@ViewBag.Error</div>
+            }
+        </div>
+    </div>
+</div>
+
+<script>
+    // Şifre göster/gizle
+    document.addEventListener('DOMContentLoaded', function() {
+        const togglePassword = document.getElementById('toggleAdminLoginPassword');
+        const passwordInput = document.getElementById('adminLoginPassword');
+        const toggleIcon = document.getElementById('toggleAdminLoginIcon');
+        
+        if (togglePassword && passwordInput && toggleIcon) {
+            togglePassword.addEventListener('click', function() {
+                if (passwordInput.type === 'password') {
+                    passwordInput.type = 'text';
+                    toggleIcon.classList.remove('fa-eye');
+                    toggleIcon.classList.add('fa-eye-slash');
+                } else {
+                    passwordInput.type = 'password';
+                    toggleIcon.classList.remove('fa-eye-slash');
+                    toggleIcon.classList.add('fa-eye');
+                }
+            });
+        }
+    });
+</script>

@@ -1,0 +1,113 @@
+@model Entities.DTOs.AppointmentDto
+@{
+    ViewData["Title"] = "Randevu Al";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-5">
+    <!-- Ana Sayfa Butonu -->
+    <div class="row mb-3">
+        <div class="col-12">
+            <a asp-action="Dashboard" class="btn btn-outline-primary">
+                <i class="fas fa-home"></i> Ana Sayfa
+            </a>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header bg-primary text-white text-center">
+                    <h3>Randevu Al</h3>
+                </div>
+                <div class="card-body">
+                    @if (ViewBag.Error != null)
+                    {
+                        <div class="alert alert-danger">@ViewBag.Error</div>
+                    }
+
+                    <form asp-action="BookAppointment" method="post">
+                        <!-- Doktor Seçimi -->
+                        <div class="mb-3">
+                            <label asp-for="DoctorId" class="form-label">Doktor</label>
+                            <select asp-for="DoctorId" class="form-control" required>
+                                <option value="">Doktor Seçiniz</option>
+                                @if (ViewBag.Doctors != null)
+                                {
+                                    @foreach (var doctor in ViewBag.Doctors)
+                                    {
+                                        <option value="@doctor.DoctorId">@doctor.DoctorFullName - @doctor.DoctorSpecialization</option>
+                                    }
+                                }
+                            </select>
+                            <span asp-validation-for="DoctorId" class="text-danger"></span>
+                        </div>
+
+                        <!-- Randevu Tarihi -->
+                        <div class="mb-3">
+                            <label asp-for="AppointmentDate" class="form-label">Randevu Tarihi</label>
+                            <input asp-for="AppointmentDate" class="form-control" type="date" min="@DateTime.Now.ToString("yyyy-MM-dd")" required />
+                            <span asp-validation-for="AppointmentDate" class="text-danger"></span>
+                        </div>
+
+                        <!-- Randevu Saati -->
+                        <div class="mb-3">
+                            <label asp-for="AppointmentTime" class="form-label">Randevu Saati</label>
+                            <select asp-for="AppointmentTime" class="form-control" id="appointmentTime" required>
+                                <option value="">Saat Seçiniz</option>
+                                <option value="07:00:00">07:00</option>
+                                <option value="07:30:00">07:30</option>
+                                <option value="08:00:00">08:00</option>
+                                <option value="08:30:00">08:30</option>
+                                <option value="09:00:00">09:00</option>
+                                <option value="09:30:00">09:30</option>
+                                <option value="10:00:00">10:00</option>
+                                <option value="10:30:00">10:30</option>
+                                <option value="11:00:00">11:00</option>
+                                <option value="11:30:00">11:30</option>
+                                <option value="12:00:00">12:00</option>
+                                <option value="12:30:00">12:30</option>
+                                <option value="13:00:00">13:00</option>
+                                <option value="13:30:00">13:30</option>
+                                <option value="14:00:00">14:00</option>
+                                <option value="14:30:00">14:30</option>
+                                <option value="15:00:00">15:00</option>
+                                <option value="15:30:00">15:30</option>
+                                <option value="16:00:00">16:00</option>
+                                <option value="16:30:00">16:30</option>
+                                <option value="17:00:00">17:00</option>
+                                <option value="17:30:00">17:30</option>
+                                <option value="18:00:00">18:00</option>
+                                <option value="18:30:00">18:30</option>
+                                <option value="19:00:00">19:00</option>
+                            </select>
+                            <span asp-validation-for="AppointmentTime" class="text-danger"></span>
+                        </div>
+
+                        <!-- Butonlar -->
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <a asp-action="Dashboard" class="btn btn-secondary me-md-2">İptal</a>
+                            <button type="submit" class="btn btn-primary">Randevu Al</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Tarih seçildiğinde geçmiş tarihleri engelle
+    document.addEventListener('DOMContentLoaded', function() {
+        const dateInput = document.querySelector('input[type="date"]');
+        const today = new Date().toISOString().split('T')[0];
+        dateInput.setAttribute('min', today);
+        
+        // Randevu durumunu otomatik olarak 1 (Aktif) olarak ayarla
+        const appointmentStatusInput = document.createElement('input');
+        appointmentStatusInput.type = 'hidden';
+        appointmentStatusInput.name = 'AppointmentStatus';
+        appointmentStatusInput.value = '1';
+        document.querySelector('form').appendChild(appointmentStatusInput);
+    });
+</script>

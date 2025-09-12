@@ -1,0 +1,365 @@
+﻿
+<div class="panel-container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h3 class="sidebar-title">Admin Paneli</h3>
+            <p class="sidebar-subtitle">Sistem Yönetimi</p>
+        </div>
+        <nav class="sidebar-nav">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a href="#" class="nav-link load-content" data-url="@Url.Action("Doctors", "Admin")">
+                        <i class="fas fa-user-md"></i> Doktorlar
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link load-content" data-url="@Url.Action("Patients", "Admin")">
+                        <i class="fas fa-user-injured"></i> Hastalar
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link load-content" data-url="@Url.Action("Appointments", "Admin")">
+                        <i class="fas fa-calendar-alt"></i> Randevular
+                    </a>
+                </li>
+                <li class="nav-item mt-4">
+                    <a href="@Url.Action("Logout", "Admin")" class="nav-link text-danger">
+                        <i class="fas fa-sign-out-alt"></i> Çıkış Yap
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="content-header">
+            <h1 class="content-title">Admin Paneli</h1>
+            <p class="content-subtitle">Sistem yönetimi ve veri kontrolü</p>
+        </div>
+        <div id="mainContent">
+            <div class="card animate-fadeInUp">
+                <div class="card-body text-center py-5">
+                    <div class="feature-icon mx-auto mb-4" style="width: 100px; height: 100px; font-size: 3rem;">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h3 class="text-gradient mb-3">Hoş Geldiniz!</h3>
+                    <p class="text-muted mb-4">Sol menüden istediğiniz bölüme erişebilirsiniz.</p>
+                    <div class="row g-3">
+                        <div class="col-md-4">
+                            <div class="card h-100">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-user-md fa-2x text-primary mb-3"></i>
+                                    <h5>Doktor Yönetimi</h5>
+                                    <p class="text-muted">Doktor kayıtları ve bilgilerini yönetin</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card h-100">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-user-injured fa-2x text-success mb-3"></i>
+                                    <h5>Hasta Yönetimi</h5>
+                                    <p class="text-muted">Hasta kayıtları ve bilgilerini yönetin</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card h-100">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-calendar-alt fa-2x text-warning mb-3"></i>
+                                    <h5>Randevu Yönetimi</h5>
+                                    <p class="text-muted">Randevuları görüntüleyin ve yönetin</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        // Sidebar'dan partial yükleme
+        $(document).on('click', '.load-content', function (e) {
+            e.preventDefault();
+            console.log('Sidebar link clicked:', $(this).text());
+            
+            $('.load-content').removeClass('active bg-secondary');
+            $(this).addClass('active bg-secondary');
+
+            var url = $(this).data('url');
+            console.log('Loading URL:', url);
+            
+            $('#mainContent').load(url, function(response, status, xhr) {
+                if (status === "error") {
+                    console.error('Error loading content:', xhr.status, xhr.statusText);
+                    $('#mainContent').html('<div class="alert alert-danger">İçerik yüklenirken hata oluştu: ' + xhr.status + '</div>');
+                } else {
+                    console.log('Content loaded successfully');
+                }
+            });
+        });
+
+        // Hasta güncelleme butonu
+        $(document).on('click', '.btn-patient-update', function (e) {
+            e.preventDefault();
+            $('#PatientId').val($(this).data('id'));
+            $('#PatientFullName').val($(this).data('name'));
+            $('#PatientTcNo').val($(this).data('tcno'));
+            $('#PatientAge').val($(this).data('age'));
+            $('#PatientGender').val($(this).data('gender'));
+            $('#PatientEmail').val($(this).data('email'));
+            $('#PatientPassword').val($(this).data('password'));
+            $('#PatientPhoneNumber').val($(this).data('phone'));
+            
+            // Modal'ı manuel olarak göster (şifre modalı gibi)
+            const modalElement = document.getElementById('updatePatientModal');
+            if (modalElement) {
+                modalElement.style.display = 'flex';
+                modalElement.classList.add('show');
+                modalElement.setAttribute('aria-hidden', 'false');
+                
+                // Body scroll'u engelle
+                document.body.style.overflow = 'hidden';
+                document.body.classList.add('modal-open');
+                
+                // İlk input'a odaklan
+                setTimeout(() => {
+                    const firstInput = document.getElementById('PatientFullName');
+                    if (firstInput) {
+                        firstInput.focus();
+                    }
+                }, 100);
+            }
+        });
+
+        // Doktor güncelleme butonu
+        $(document).on('click', '.btn-doctor-update', function (e) {
+            e.preventDefault();
+            $('#DoctorId').val($(this).data('id'));
+            $('#DoctorFullName').val($(this).data('name'));
+            $('#DoctorTcNo').val($(this).data('tcno'));
+            $('#DoctorSpecialization').val($(this).data('specialization'));
+            $('#DoctorPhoneNumber').val($(this).data('phone'));
+            $('#DoctorEmail').val($(this).data('email'));
+            $('#DoctorPassword').val($(this).data('password'));
+            
+            // Modal'ı manuel olarak göster (şifre modalı gibi)
+            const modalElement = document.getElementById('updateDoctorModal');
+            if (modalElement) {
+                modalElement.style.display = 'flex';
+                modalElement.classList.add('show');
+                modalElement.setAttribute('aria-hidden', 'false');
+                
+                // Body scroll'u engelle
+                document.body.style.overflow = 'hidden';
+                document.body.classList.add('modal-open');
+                
+                // İlk input'a odaklan
+                setTimeout(() => {
+                    const firstInput = document.getElementById('DoctorFullName');
+                    if (firstInput) {
+                        firstInput.focus();
+                    }
+                }, 100);
+            }
+        });
+
+        // Hasta güncelleme butonu
+        $(document).on('click', '#updatePatientBtn', function(e) {
+            e.preventDefault();
+            
+            var formData = $('#updatePatientForm').serialize();
+            
+            $.ajax({
+                url: '@Url.Action("UpdatePatient", "Admin")',
+                type: 'POST',
+                data: formData,
+                success: function(response) {
+                    if (response.success) {
+                        // Modal'ı manuel olarak kapat (şifre modalı gibi)
+                        const modalElement = document.getElementById('updatePatientModal');
+                        if (modalElement) {
+                            modalElement.style.display = 'none';
+                            modalElement.classList.remove('show');
+                            modalElement.setAttribute('aria-hidden', 'true');
+                        }
+                        $('#mainContent').load('@Url.Action("Patients", "Admin")');
+                        showToast('Hasta başarıyla güncellendi!', 'success');
+                    } else {
+                        showAlert('Hata: ' + response.message, 'error', 'Hata');
+                    }
+                },
+                error: function() {
+                    showAlert('Bir hata oluştu!', 'error', 'Hata');
+                }
+            });
+        });
+
+        // Doktor güncelleme butonu
+        $(document).on('click', '#updateDoctorBtn', function(e) {
+            e.preventDefault();
+            
+            var formData = $('#updateDoctorForm').serialize();
+            
+            $.ajax({
+                url: '@Url.Action("UpdateDoctor", "Admin")',
+                type: 'POST',
+                data: formData,
+                success: function(response) {
+                    if (response.success) {
+                        // Modal'ı manuel olarak kapat (şifre modalı gibi)
+                        const modalElement = document.getElementById('updateDoctorModal');
+                        if (modalElement) {
+                            modalElement.style.display = 'none';
+                            modalElement.classList.remove('show');
+                            modalElement.setAttribute('aria-hidden', 'true');
+                        }
+                        $('#mainContent').load('@Url.Action("Doctors", "Admin")');
+                        showToast('Doktor başarıyla güncellendi!', 'success');
+                    } else {
+                        showAlert('Hata: ' + response.message, 'error', 'Hata');
+                    }
+                },
+                error: function() {
+                    showAlert('Bir hata oluştu!', 'error', 'Hata');
+                }
+            });
+        });
+
+        // Hasta silme butonu
+        $(document).on('click', '.btn-patient-delete', function(e) {
+            e.preventDefault();
+            var patientId = $(this).data('id');
+            var patientName = $(this).closest('tr').find('.c-name').text();
+            
+            showConfirmAlert(
+                patientName + ' adlı hastayı silmek istediğinizden emin misiniz?',
+                'warning',
+                'Hasta Silme Onayı',
+                function() {
+                    $.ajax({
+                        url: '@Url.Action("DeletePatient", "Admin")',
+                        type: 'POST',
+                        data: { id: patientId },
+                        success: function(response) {
+                            if (response.success) {
+                                $('#mainContent').load('@Url.Action("Patients", "Admin")');
+                                showToast('Hasta başarıyla silindi!', 'success');
+                            } else {
+                                showAlert('Hata: ' + response.message, 'error', 'Hata');
+                            }
+                        },
+                        error: function() {
+                            showAlert('Bir hata oluştu!', 'error', 'Hata');
+                        }
+                    });
+                },
+                function() {
+                    showToast('İşlem iptal edildi.', 'info');
+                }
+            );
+        });
+
+        // Doktor silme butonu
+        $(document).on('click', '.btn-doctor-delete', function(e) {
+            e.preventDefault();
+            var doctorId = $(this).data('id');
+            var doctorName = $(this).closest('tr').find('.c-name').text();
+            
+            showConfirmAlert(
+                doctorName + ' adlı doktoru silmek istediğinizden emin misiniz?',
+                'warning',
+                'Doktor Silme Onayı',
+                function() {
+                    $.ajax({
+                        url: '@Url.Action("DeleteDoctor", "Admin")',
+                        type: 'POST',
+                        data: { id: doctorId },
+                        success: function(response) {
+                            if (response.success) {
+                                $('#mainContent').load('@Url.Action("Doctors", "Admin")');
+                                showToast('Doktor başarıyla silindi!', 'success');
+                            } else {
+                                showAlert('Hata: ' + response.message, 'error', 'Hata');
+                            }
+                        },
+                        error: function() {
+                            showAlert('Bir hata oluştu!', 'error', 'Hata');
+                        }
+                    });
+                },
+                function() {
+                    showToast('İşlem iptal edildi.', 'info');
+                }
+            );
+        });
+
+        // Modal kapatma fonksiyonları
+        function closeUpdatePatientModal() {
+            try {
+                const modalElement = document.getElementById('updatePatientModal');
+                if (modalElement) {
+                    modalElement.style.display = 'none';
+                    modalElement.classList.remove('show');
+                    modalElement.setAttribute('aria-hidden', 'true');
+                    
+                    // Body scroll'u geri aç
+                    document.body.style.overflow = '';
+                    document.body.classList.remove('modal-open');
+                }
+            } catch (error) {
+                console.error('Hasta modal kapatma hatası:', error);
+            }
+        }
+
+        function closeUpdateDoctorModal() {
+            try {
+                const modalElement = document.getElementById('updateDoctorModal');
+                if (modalElement) {
+                    modalElement.style.display = 'none';
+                    modalElement.classList.remove('show');
+                    modalElement.setAttribute('aria-hidden', 'true');
+                    
+                    // Body scroll'u geri aç
+                    document.body.style.overflow = '';
+                    document.body.classList.remove('modal-open');
+                }
+            } catch (error) {
+                console.error('Doktor modal kapatma hatası:', error);
+            }
+        }
+
+        // Background click ile modal kapatma
+        $(document).on('click', '#updatePatientModal', function(e) {
+            if (e.target === this) {
+                closeUpdatePatientModal();
+            }
+        });
+
+        $(document).on('click', '#updateDoctorModal', function(e) {
+            if (e.target === this) {
+                closeUpdateDoctorModal();
+            }
+        });
+
+        // ESC tuşu ile modal kapatma
+        $(document).on('keydown', function(e) {
+            if (e.key === 'Escape') {
+                const patientModal = document.getElementById('updatePatientModal');
+                const doctorModal = document.getElementById('updateDoctorModal');
+                
+                if (patientModal && patientModal.style.display === 'flex') {
+                    closeUpdatePatientModal();
+                } else if (doctorModal && doctorModal.style.display === 'flex') {
+                    closeUpdateDoctorModal();
+                }
+            }
+        });
+
+    </script>
+}

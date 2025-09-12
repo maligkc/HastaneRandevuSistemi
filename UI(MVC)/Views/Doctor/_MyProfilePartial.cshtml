@@ -1,0 +1,136 @@
+@model Entities.DTOs.DoctorDto
+
+<div class="card">
+    <div class="card-header">
+        <h5 class="mb-0">Profil Bilgilerim</h5>
+    </div>
+    <div class="card-body">
+        @if (Model != null)
+        {
+            <form id="profileForm">
+                <input type="hidden" id="doctorId" value="@Model.DoctorId" />
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label class="form-label">Ad Soyad</label>
+                            <input type="text" id="doctorFullName" class="form-control" value="@Model.DoctorFullName" required />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label class="form-label">TC Kimlik No</label>
+                            <input type="text" id="doctorTcNo" class="form-control" value="@Model.DoctorTcNo" readonly />
+                            <small class="form-text text-muted">TC Kimlik No değiştirilemez</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label class="form-label">Uzmanlık Alanı</label>
+                            <select id="doctorSpecialization" class="form-select" required>
+                                <option value="" disabled>Seçiniz</option>
+                                @{
+                                    var specializations = new[]
+                                    {
+                                        "Acil Tıp", "Aile Hekimliği", "Algoloji (Ağrı)", "Anesteziyoloji ve Reanimasyon",
+                                        "Beyin ve Sinir Cerrahisi", "Çocuk Cerrahisi", "Çocuk Endokrinolojisi",
+                                        "Çocuk Hematolojisi ve Onkolojisi", "Çocuk İmmünolojisi ve Alerji Hastalıkları",
+                                        "Çocuk Kardiyolojisi", "Çocuk Nörolojisi", "Çocuk Sağlığı ve Hastalıkları",
+                                        "Dermatoloji (Cildiye)", "Enfeksiyon Hastalıkları ve Klinik Mikrobiyoloji",
+                                        "Endokrinoloji ve Metabolizma Hastalıkları", "Fiziksel Tıp ve Rehabilitasyon (FTR)",
+                                        "Gastroenteroloji", "Genel Cerrahi", "Geriatri", "Göz Hastalıkları (Oftalmoloji)",
+                                        "Göğüs Cerrahisi", "Göğüs Hastalıkları (Pulmonoloji)", "Hematoloji",
+                                        "İç Hastalıkları (Dahiliye)", "İmmünoloji ve Alerji Hastalıkları (Erişkin)",
+                                        "Kadın Hastalıkları ve Doğum", "Kalp ve Damar Cerrahisi", "Kardiyoloji",
+                                        "Kulak Burun Boğaz Hastalıkları (KBB)", "Nefroloji", "Neonatoloji (Yenidoğan)",
+                                        "Nöroloji", "Nükleer Tıp", "Ortopedi ve Travmatoloji", "Perinatoloji (Riskli Gebelikler)",
+                                        "Plastik, Rekonstrüktif ve Estetik Cerrahi", "Psikiyatri", "Radyasyon Onkolojisi",
+                                        "Radyoloji", "Romatoloji", "Spor Hekimliği", "Tıbbi Genetik", "Tıbbi Onkoloji",
+                                        "Tıbbi Patoloji", "Üroloji", "Yoğun Bakım"
+                                    };
+                                }
+                                @foreach (var spec in specializations)
+                                {
+                                    <option value="@spec" selected="@(Model.DoctorSpecialization == spec)">@spec</option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" id="doctorEmail" class="form-control" value="@Model.DoctorEmail" required />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label class="form-label">Telefon</label>
+                            <input type="tel" id="doctorPhoneNumber" class="form-control" value="@Model.DoctorPhoneNumber" placeholder="0 (5__) __ ____" required />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <!-- Boş alan -->
+                    </div>
+                </div>
+
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <button type="button" class="btn btn-warning me-2" onclick="openPasswordModal()">
+                        <i class="fas fa-key"></i> Şifre Değiştir
+                    </button>
+                    <button type="button" class="btn btn-info" onclick="updateProfile()">
+                        <i class="fas fa-save"></i> Bilgileri Güncelle
+                    </button>
+                </div>
+            </form>
+        }
+        else
+        {
+            <div class="text-center py-4">
+                <i class="fas fa-exclamation-triangle fa-3x text-warning mb-3"></i>
+                <h5 class="text-warning">Profil bilgileri yüklenemedi</h5>
+                <p class="text-muted">Lütfen sayfayı yenileyin veya tekrar giriş yapın.</p>
+            </div>
+        }
+    </div>
+</div>
+
+<!-- Şifre Güncelleme Modal -->
+<div class="modal" id="passwordModal" tabindex="-1" role="dialog" aria-labelledby="passwordModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="passwordModalLabel">Şifre Değiştir</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Kapat"></button>
+            </div>
+            <div class="modal-body">
+                <form id="passwordForm">
+                    <div class="mb-3">
+                        <label for="currentPassword" class="form-label">Mevcut Şifre</label>
+                        <input type="password" id="currentPassword" name="currentPassword" class="form-control" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="newPassword" class="form-label">Yeni Şifre</label>
+                        <input type="password" id="newPassword" name="newPassword" class="form-control" maxlength="10" required />
+                        <small class="form-text text-muted">Maksimum 10 karakter</small>
+                    </div>
+                    <div class="mb-3">
+                        <label for="confirmPassword" class="form-label">Yeni Şifre Tekrar</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" class="form-control" maxlength="10" required />
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">İptal</button>
+                <button type="button" class="btn btn-warning" onclick="updatePassword()">Şifre Değiştir</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript fonksiyonu ana sayfada tanımlanmıştır -->
+

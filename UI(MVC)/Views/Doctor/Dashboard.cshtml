@@ -1,0 +1,451 @@
+@{
+    ViewData["Title"] = "Doktor Paneli";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var doctorName = Context.Session.GetString("DoctorName");
+}
+
+<div class="panel-container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h3 class="sidebar-title">Doktor Paneli</h3>
+            <p class="sidebar-subtitle">Hoş geldiniz, @doctorName</p>
+        </div>
+        <nav class="sidebar-nav">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#" onclick="loadContent('dashboard')">
+                        <i class="fas fa-tachometer-alt"></i> Ana Sayfa
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="loadContent('appointments')">
+                        <i class="fas fa-calendar-alt"></i> Randevularım
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="loadContent('profile')">
+                        <i class="fas fa-user"></i> Profilim
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-action="Logout">
+                        <i class="fas fa-sign-out-alt"></i> Çıkış Yap
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="content-header">
+            <h1 class="content-title" id="page-title">Ana Sayfa</h1>
+            <p class="content-subtitle">Randevularınızı görüntüleyin ve profil bilgilerinizi yönetin</p>
+        </div>
+
+        <div id="content-area">
+                <!-- Dashboard Content -->
+                <div id="dashboard-content">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card text-white bg-info mb-3">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between">
+                                        <div>
+                                            <h4 class="card-title">Randevularım</h4>
+                                            <p class="card-text">Size alınan randevuları görüntüleyin</p>
+                                        </div>
+                                        <div class="align-self-center">
+                                            <i class="fas fa-calendar-alt fa-2x"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="#" onclick="loadContent('appointments')" class="text-white text-decoration-none">
+                                        Randevularımı Gör <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card text-white bg-secondary mb-3">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between">
+                                        <div>
+                                            <h4 class="card-title">Profilim</h4>
+                                            <p class="card-text">Bilgilerinizi güncelleyin</p>
+                                        </div>
+                                        <div class="align-self-center">
+                                            <i class="fas fa-user fa-2x"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="#" onclick="loadContent('profile')" class="text-white text-decoration-none">
+                                        Profilimi Gör <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bugünkü Randevular -->
+                    <div class="card mt-4">
+                        <!--<div class="card-header">
+                            <h5 class="mb-0">Bugünkü Randevular</h5
+                        </div>>-->
+                        <div class="card-body">
+                            <div id="today-appointments">
+                                <div class="text-center">
+                                    <div class="spinner-border" role="status">
+                                        <span class="visually-hidden">Yükleniyor...</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dynamic Content Area -->
+                <div id="dynamic-content"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function loadContent(type) {
+        // Update active nav item
+        document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
+        event.target.classList.add('active');
+
+        // Update page title
+        const titles = {
+            'dashboard': 'Ana Sayfa',
+            'appointments': 'Randevularım',
+            'profile': 'Profilim'
+        };
+        document.getElementById('page-title').textContent = titles[type];
+
+        // Hide dashboard content
+        document.getElementById('dashboard-content').style.display = 'none';
+        document.getElementById('dynamic-content').innerHTML = '<div class="text-center"><div class="spinner-border" role="status"><span class="visually-hidden">Yükleniyor...</span></div></div>';
+
+        // Load content based on type
+        switch (type) {
+            case 'appointments':
+                loadAppointments();
+                break;
+            case 'profile':
+                loadProfile();
+                break;
+            case 'dashboard':
+                document.getElementById('dashboard-content').style.display = 'block';
+                document.getElementById('dynamic-content').innerHTML = '';
+                loadTodayAppointments();
+                break;
+        }
+    }
+
+    function loadAppointments() {
+        fetch('@Url.Action("MyAppointments", "Doctor")')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('dynamic-content').innerHTML = data;
+            })
+            .catch(error => {
+                document.getElementById('dynamic-content').innerHTML = '<div class="alert alert-danger">Randevular yüklenirken hata oluştu.</div>';
+            });
+    }
+
+    function loadProfile() {
+        fetch('@Url.Action("MyProfile", "Doctor")')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('dynamic-content').innerHTML = data;
+                // Telefon formatlamasını uygula
+                applyPhoneFormatting();
+            })
+            .catch(error => {
+                document.getElementById('dynamic-content').innerHTML = '<div class="alert alert-danger">Profil bilgileri yüklenirken hata oluştu.</div>';
+            });
+    }
+
+    // Telefon numarası formatlaması
+    function formatPhoneNumber(input) {
+        let value = input.value.replace(/\D/g, ''); // Sadece rakamları al
+        
+        // Eğer 0 ile başlamıyorsa, başına 0 ekle
+        if (value.length > 0 && !value.startsWith('0')) {
+            value = '0' + value;
+        }
+        
+        // Maksimum 11 karakter (0 + 10 rakam)
+        if (value.length > 11) {
+            value = value.slice(0, 11);
+        }
+        
+        // Formatla: 0 (535) 790 8732
+        if (value.length > 0) {
+            if (value.length <= 1) {
+                value = value; // Sadece 0
+            } else if (value.length <= 4) {
+                value = value.slice(0, 1) + ' (' + value.slice(1);
+            } else if (value.length <= 7) {
+                value = value.slice(0, 1) + ' (' + value.slice(1, 4) + ') ' + value.slice(4);
+            } else if (value.length <= 9) {
+                value = value.slice(0, 1) + ' (' + value.slice(1, 4) + ') ' + value.slice(4, 7) + ' ' + value.slice(7);
+            } else {
+                value = value.slice(0, 1) + ' (' + value.slice(1, 4) + ') ' + value.slice(4, 7) + ' ' + value.slice(7, 9) + value.slice(9);
+            }
+        }
+        
+        input.value = value;
+    }
+
+    // Telefon numarasını temizle (veritabanına gönderirken)
+    function cleanPhoneNumber(phoneNumber) {
+        return phoneNumber.replace(/\D/g, '');
+    }
+
+    // Telefon formatlamasını uygula
+    function applyPhoneFormatting() {
+        const phoneInput = document.getElementById('doctorPhoneNumber');
+        if (phoneInput) {
+            // Mevcut değeri formatla
+            formatPhoneNumber(phoneInput);
+            
+            // Input event listener ekle
+            phoneInput.addEventListener('input', function() {
+                formatPhoneNumber(this);
+            });
+        }
+    }
+
+    function loadTodayAppointments() {
+        fetch('@Url.Action("MyAppointments", "Doctor")')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('today-appointments').innerHTML = data;
+            })
+            .catch(error => {
+                document.getElementById('today-appointments').innerHTML = '<div class="alert alert-danger">Bugünkü randevular yüklenirken hata oluştu.</div>';
+            });
+    }
+
+    // Sayfa yüklendiğinde bugünkü randevuları yükle
+    document.addEventListener('DOMContentLoaded', function() {
+        loadTodayAppointments();
+        
+        // Modal kapatma event listener'ları
+        document.addEventListener('click', function(e) {
+            if (e.target.classList.contains('btn-close') || 
+                e.target.classList.contains('btn-secondary') ||
+                e.target.textContent === 'İptal') {
+                e.preventDefault();
+                e.stopPropagation();
+                closePasswordModal();
+            }
+        });
+        
+        // ESC tuşu ile modal kapatma
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                e.preventDefault();
+                e.stopPropagation();
+                closePasswordModal();
+            }
+        });
+        
+        // Modal backdrop click to close
+        document.addEventListener('click', function(e) {
+            if (e.target.classList.contains('modal') && e.target.classList.contains('show')) {
+                e.preventDefault();
+                e.stopPropagation();
+                closePasswordModal();
+            }
+        });
+    });
+
+    // Şifre modalını aç
+    function openPasswordModal() {
+        try {
+            const modalElement = document.getElementById('passwordModal');
+            
+            if (modalElement) {
+                // Form'u temizle
+                const form = document.getElementById('passwordForm');
+                if (form) {
+                    form.reset();
+                }
+                
+                // Modal'ı manuel olarak göster
+                modalElement.style.display = 'flex';
+                modalElement.classList.add('show');
+                modalElement.setAttribute('aria-hidden', 'false');
+                
+                // İlk input'a odaklan
+                setTimeout(() => {
+                    const firstInput = document.getElementById('currentPassword');
+                    if (firstInput) {
+                        firstInput.focus();
+                    }
+                }, 100);
+            }
+        } catch (error) {
+            console.error('Modal açma hatası:', error);
+        }
+    }
+
+    // Modal kapatma fonksiyonu
+    function closePasswordModal() {
+        try {
+            const modalElement = document.getElementById('passwordModal');
+            
+            if (modalElement) {
+                modalElement.style.display = 'none';
+                modalElement.classList.remove('show');
+                modalElement.setAttribute('aria-hidden', 'true');
+                
+                // Form'u temizle
+                const form = document.getElementById('passwordForm');
+                if (form) {
+                    form.reset();
+                }
+            }
+        } catch (error) {
+            console.error('Modal kapatma hatası:', error);
+        }
+    }
+
+    // Şifre güncelleme
+    function updatePassword() {
+        const currentPassword = document.getElementById('currentPassword').value;
+        const newPassword = document.getElementById('newPassword').value;
+        const confirmPassword = document.getElementById('confirmPassword').value;
+        
+        // Validasyon
+        if (!currentPassword) {
+            showAlert('Lütfen mevcut şifrenizi girin!', 'warning', 'Uyarı');
+            return;
+        }
+        
+        if (!newPassword) {
+            showAlert('Lütfen yeni şifrenizi girin!', 'warning', 'Uyarı');
+            return;
+        }
+        
+        if (newPassword.length > 10) {
+            showAlert('Şifre maksimum 10 karakter olabilir!', 'warning', 'Uyarı');
+            return;
+        }
+        
+        if (newPassword !== confirmPassword) {
+            showAlert('Yeni şifreler uyuşmuyor!', 'warning', 'Uyarı');
+            return;
+        }
+        
+        const doctorIdElement = document.getElementById('doctorId');
+        const doctorId = doctorIdElement ? parseInt(doctorIdElement.value) : 0;
+        
+        const passwordData = {
+            DoctorId: doctorId,
+            CurrentPassword: currentPassword,
+            NewPassword: newPassword
+        };
+        
+        fetch('@Url.Action("UpdatePassword", "Doctor")', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(passwordData)
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                showToast('Şifreniz başarıyla güncellendi!', 'success');
+                // Modal'ı kapat
+                closePasswordModal();
+            } else {
+                showAlert('Hata: ' + data.message, 'error', 'Hata');
+            }
+        })
+        .catch(error => {
+            showAlert('Bir hata oluştu: ' + error, 'error', 'Hata');
+        });
+    }
+
+    // Global updateProfile fonksiyonu
+    function updateProfile() {
+        const doctorIdElement = document.getElementById('doctorId');
+        const doctorId = doctorIdElement ? parseInt(doctorIdElement.value) : 0;
+        
+        console.log('DoctorId:', doctorId);
+        console.log('DoctorId Element:', doctorIdElement);
+        console.log('DoctorId Element Value:', doctorIdElement ? doctorIdElement.value : 'Element not found');
+        
+        const doctorData = {
+            DoctorId: doctorId,
+            DoctorFullName: document.getElementById('doctorFullName').value,
+            DoctorTcNo: document.getElementById('doctorTcNo').value,
+            DoctorSpecialization: document.getElementById('doctorSpecialization').value,
+            DoctorPhoneNumber: cleanPhoneNumber(document.getElementById('doctorPhoneNumber').value),
+            DoctorEmail: document.getElementById('doctorEmail').value
+        };
+        
+        console.log('Doctor Data:', doctorData);
+        console.log('JSON String:', JSON.stringify(doctorData));
+
+        fetch('@Url.Action("UpdateProfile", "Doctor")', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(doctorData)
+        })
+        .then(response => {
+            console.log('Response Status:', response.status);
+            console.log('Response OK:', response.ok);
+            return response.json();
+        })
+        .then(data => {
+            console.log('Response Data:', data);
+            if (data.success) {
+                showToast('Profil bilgileriniz başarıyla güncellendi!', 'success');
+            } else {
+                showAlert('Hata: ' + data.message, 'error', 'Hata');
+            }
+        })
+        .catch(error => {
+            console.log('Fetch Error:', error);
+            showAlert('Bir hata oluştu: ' + error, 'error', 'Hata');
+        });
+    }
+</script>
+
+<style>
+    .sidebar {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 100;
+        padding: 48px 0 0;
+        box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+    }
+
+    .sidebar .nav-link {
+        font-weight: 500;
+        color: #333;
+    }
+
+    .sidebar .nav-link:hover {
+        color: #17a2b8;
+    }
+
+    .sidebar .nav-link.active {
+        color: #17a2b8;
+    }
+</style>
+

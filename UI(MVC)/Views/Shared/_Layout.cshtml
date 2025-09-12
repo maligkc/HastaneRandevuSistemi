@@ -1,0 +1,247 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Hastane Randevu Sistemi</title>
+    <meta name="description" content="Modern ve güvenli hastane randevu sistemi. Hızlı randevu alın, sağlığınızı öncelik haline getirin." />
+    <meta name="keywords" content="hastane, randevu, sağlık, doktor, hasta" />
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="~/favicon.ico">
+</head>
+<body>
+    <div class="">
+        @RenderBody()
+    </div>
+
+    <!-- Toast Container -->
+    <div class="toast-container position-fixed top-0 end-0 p-3" id="toastContainer"></div>
+
+    <!-- Custom Alert Modal -->
+    <div class="modal fade" id="customAlertModal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="alertTitle">Bilgi</h5>
+                </div>
+                <div class="modal-body text-center py-4">
+                    <div id="alertIcon" class="mb-3">
+                        <i class="fas fa-info-circle fa-3x text-primary"></i>
+                    </div>
+                    <p id="alertMessage" class="mb-0">Mesaj burada görünecek</p>
+                </div>
+                <div class="modal-footer border-0 justify-content-center">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Tamam</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Confirm Modal -->
+    <div class="modal fade" id="customConfirmModal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="confirmTitle">Onay Gerekli</h5>
+                </div>
+                <div class="modal-body text-center py-4">
+                    <div id="confirmIcon" class="mb-3">
+                        <i class="fas fa-exclamation-circle fa-3x text-warning"></i>
+                    </div>
+                    <p id="confirmMessage" class="mb-0">Bu işlemi gerçekleştirmek istediğinizden emin misiniz?</p>
+                </div>
+                <div class="modal-footer border-0 justify-content-center">
+                    <button type="button" class="btn btn-secondary me-2" data-bs-dismiss="modal">Vazgeç</button>
+                    <button type="button" class="btn btn-danger">Evet</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    
+    <!-- Custom Alert System -->
+    <script>
+        // Custom Alert System
+        function showAlert(message, type = 'info', title = 'Bilgi', callback = null) {
+            const modal = new bootstrap.Modal(document.getElementById('customAlertModal'));
+            const alertTitle = document.getElementById('alertTitle');
+            const alertMessage = document.getElementById('alertMessage');
+            const alertIcon = document.getElementById('alertIcon');
+            const okButton = document.querySelector('#customAlertModal .btn-primary');
+            
+            // Set title
+            alertTitle.textContent = title;
+            
+            // Set message
+            alertMessage.textContent = message;
+            
+            // Set icon and color based on type
+            const iconElement = alertIcon.querySelector('i');
+            iconElement.className = 'fas fa-3x mb-3';
+            
+            switch(type) {
+                case 'success':
+                    iconElement.classList.add('fa-check-circle', 'text-success');
+                    break;
+                case 'error':
+                case 'danger':
+                    iconElement.classList.add('fa-exclamation-triangle', 'text-danger');
+                    break;
+                case 'warning':
+                    iconElement.classList.add('fa-exclamation-circle', 'text-warning');
+                    break;
+                case 'info':
+                default:
+                    iconElement.classList.add('fa-info-circle', 'text-primary');
+                    break;
+            }
+            
+            // Handle callback
+            if (callback && typeof callback === 'function') {
+                okButton.onclick = function() {
+                    modal.hide();
+                    callback();
+                };
+            } else {
+                okButton.onclick = function() {
+                    modal.hide();
+                };
+            }
+            
+            modal.show();
+        }
+        
+        // Custom Confirm Alert System
+        function showConfirmAlert(message, type = 'warning', title = 'Onay Gerekli', onConfirm = null, onCancel = null) {
+            const modal = new bootstrap.Modal(document.getElementById('customConfirmModal'));
+            const alertTitle = document.getElementById('confirmTitle');
+            const alertMessage = document.getElementById('confirmMessage');
+            const alertIcon = document.getElementById('confirmIcon');
+            const confirmButton = document.querySelector('#customConfirmModal .btn-danger');
+            const cancelButton = document.querySelector('#customConfirmModal .btn-secondary');
+            
+            // Set title
+            alertTitle.textContent = title;
+            
+            // Set message
+            alertMessage.textContent = message;
+            
+            // Set icon and color based on type
+            const iconElement = alertIcon.querySelector('i');
+            iconElement.className = 'fas fa-3x mb-3';
+            
+            switch(type) {
+                case 'success':
+                    iconElement.classList.add('fa-check-circle', 'text-success');
+                    break;
+                case 'error':
+                case 'danger':
+                    iconElement.classList.add('fa-exclamation-triangle', 'text-danger');
+                    break;
+                case 'warning':
+                    iconElement.classList.add('fa-exclamation-circle', 'text-warning');
+                    break;
+                case 'info':
+                default:
+                    iconElement.classList.add('fa-info-circle', 'text-primary');
+                    break;
+            }
+            
+            // Handle confirm callback
+            if (onConfirm && typeof onConfirm === 'function') {
+                confirmButton.onclick = function() {
+                    modal.hide();
+                    onConfirm();
+                };
+            } else {
+                confirmButton.onclick = function() {
+                    modal.hide();
+                };
+            }
+            
+            // Handle cancel callback
+            if (onCancel && typeof onCancel === 'function') {
+                cancelButton.onclick = function() {
+                    modal.hide();
+                    onCancel();
+                };
+            } else {
+                cancelButton.onclick = function() {
+                    modal.hide();
+                };
+            }
+            
+            modal.show();
+        }
+        
+        // Toast notification
+        function showToast(message, type = 'info') {
+            const toastContainer = document.getElementById('toastContainer');
+            const toastId = 'toast-' + Date.now();
+            
+            let iconClass = 'fa-info-circle';
+            let bgClass = 'bg-primary';
+            
+            switch(type) {
+                case 'success':
+                    iconClass = 'fa-check-circle';
+                    bgClass = 'bg-success';
+                    break;
+                case 'error':
+                case 'danger':
+                    iconClass = 'fa-exclamation-triangle';
+                    bgClass = 'bg-danger';
+                    break;
+                case 'warning':
+                    iconClass = 'fa-exclamation-circle';
+                    bgClass = 'bg-warning';
+                    break;
+            }
+            
+            const toastHtml = `
+                <div id="${toastId}" class="toast ${bgClass} text-white" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="toast-header ${bgClass} text-white border-0">
+                        <i class="fas ${iconClass} me-2"></i>
+                        <strong class="me-auto">Bilgi</strong>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast"></button>
+                    </div>
+                    <div class="toast-body">
+                        ${message}
+                    </div>
+                </div>
+            `;
+            
+            toastContainer.insertAdjacentHTML('beforeend', toastHtml);
+            
+            const toastElement = document.getElementById(toastId);
+            const toast = new bootstrap.Toast(toastElement, {
+                autohide: true,
+                delay: 5000
+            });
+            
+            toast.show();
+            
+            // Remove element after hiding
+            toastElement.addEventListener('hidden.bs.toast', function() {
+                toastElement.remove();
+            });
+        }
+    </script>
+    
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

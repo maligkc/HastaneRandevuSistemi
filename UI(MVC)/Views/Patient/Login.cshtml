@@ -1,0 +1,75 @@
+@model Entities.DTOs.PatientLoginDto
+@{
+    ViewData["Title"] = "Hasta Girişi";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-primary text-white text-center">
+                    <h3>Hasta Girişi</h3>
+                </div>
+                <div class="card-body">
+                    @if (ViewBag.Error != null)
+                    {
+                        <div class="alert alert-danger">@ViewBag.Error</div>
+                    }
+
+                    <form asp-action="Login" method="post">
+                        <div class="mb-3">
+                            <label asp-for="PatientEmail" class="form-label">Email</label>
+                            <input asp-for="PatientEmail" class="form-control" type="email" required />
+                            <span asp-validation-for="PatientEmail" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="PatientPassword" class="form-label">Şifre</label>
+                            <div class="input-group">
+                                <input asp-for="PatientPassword" id="patientLoginPassword" class="form-control" type="password" required />
+                                <button class="btn btn-outline-secondary" type="button" id="togglePatientLoginPassword">
+                                    <i class="fas fa-eye" id="togglePatientLoginIcon"></i>
+                                </button>
+                            </div>
+                            <span asp-validation-for="PatientPassword" class="text-danger"></span>
+                        </div>
+
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary">Giriş Yap</button>
+                        </div>
+                    </form>
+
+                    <div class="text-center mt-3">
+                        <p>Hesabınız yok mu? <a asp-action="Register" class="text-decoration-none">Kayıt Ol</a></p>
+                        <p><a asp-controller="Home" asp-action="Index" class="text-decoration-none">Ana Sayfaya Dön</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Şifre göster/gizle
+    document.addEventListener('DOMContentLoaded', function() {
+        const togglePassword = document.getElementById('togglePatientLoginPassword');
+        const passwordInput = document.getElementById('patientLoginPassword');
+        const toggleIcon = document.getElementById('togglePatientLoginIcon');
+        
+        if (togglePassword && passwordInput && toggleIcon) {
+            togglePassword.addEventListener('click', function() {
+                if (passwordInput.type === 'password') {
+                    passwordInput.type = 'text';
+                    toggleIcon.classList.remove('fa-eye');
+                    toggleIcon.classList.add('fa-eye-slash');
+                } else {
+                    passwordInput.type = 'password';
+                    toggleIcon.classList.remove('fa-eye-slash');
+                    toggleIcon.classList.add('fa-eye');
+                }
+            });
+        }
+    });
+</script>
+

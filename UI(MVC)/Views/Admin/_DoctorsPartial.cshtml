@@ -1,0 +1,145 @@
+﻿@using Entities.DTOs
+@model List<DoctorDto>
+
+<h2>Doktorlar</h2>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Ad Soyad</th>
+            <th>TC No</th>
+            <th>Uzmanlık</th>
+            <th>Telefon No</th>
+            <th>Email</th>
+            <th>Şifre</th>
+            <th>Güncelle</th>
+            <th>Sil</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var doctor in Model)
+        {
+            <tr data-row-id="@doctor.DoctorId">
+                <td>@doctor.DoctorId</td>
+                <td class="c-name">@doctor.DoctorFullName</td>
+                <td class="c-tcno">@doctor.DoctorTcNo</td>
+                <td class="c-specialization">@doctor.DoctorSpecialization</td>
+                <td class="c-phone">@doctor.DoctorPhoneNumber</td>
+                <td class="c-email">@doctor.DoctorEmail</td>
+                <td class="c-password">@doctor.DoctorPassword</td>
+                <td>
+                    <button type="button"
+                            class="btn btn-secondary btn-doctor-update"
+                            data-id="@doctor.DoctorId"
+                            data-name="@doctor.DoctorFullName"
+                            data-tcno="@doctor.DoctorTcNo"
+                            data-specialization="@doctor.DoctorSpecialization"
+                            data-phone="@doctor.DoctorPhoneNumber"
+                            data-email="@doctor.DoctorEmail"
+                            data-password="@doctor.DoctorPassword">
+                        Güncelle
+                    </button>
+                </td>
+                <td>
+                    <a href="#" class="btn btn-danger btn-doctor-delete" data-id="@doctor.DoctorId">Sil</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+
+<!-- Güncelle Modal -->
+<div class="modal" id="updateDoctorModal" tabindex="-1" role="dialog" aria-labelledby="updateDoctorModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="updateDoctorModalLabel">Doktor Güncelle</h5>
+                <button type="button" class="btn-close" onclick="closeUpdateDoctorModal()" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="updateDoctorForm">
+                    <input type="hidden" id="DoctorId" name="DoctorId" />
+                    <div class="mb-3">
+                        <label>Ad Soyad</label>
+                        <input type="text" id="DoctorFullName" name="DoctorFullName" class="form-control" placeholder="AD SOYAD" />
+                    </div>
+                    <div class="mb-3">
+                        <label>TC No</label>
+                        <input type="text" id="DoctorTcNo" name="DoctorTcNo" class="form-control" maxlength="11" pattern="[0-9]{11}" placeholder="12345678901" />
+                    </div>
+                    <div class="mb-3">
+                        <label>Uzmanlık</label>
+                        <select id="DoctorSpecialization" name="DoctorSpecialization" required>
+                            <option value="" disabled selected>Seçiniz</option>
+                            <option value="Acil Tıp">Acil Tıp</option>
+                            <option value="Aile Hekimliği">Aile Hekimliği</option>
+                            <option value="Algoloji (Ağrı)">Algoloji (Ağrı)</option>
+                            <option value="Anesteziyoloji ve Reanimasyon">Anesteziyoloji ve Reanimasyon</option>
+                            <option value="Beyin ve Sinir Cerrahisi">Beyin ve Sinir Cerrahisi</option>
+                            <option value="Çocuk Cerrahisi">Çocuk Cerrahisi</option>
+                            <option value="Çocuk Endokrinolojisi">Çocuk Endokrinolojisi</option>
+                            <option value="Çocuk Hematolojisi ve Onkolojisi">Çocuk Hematolojisi ve Onkolojisi</option>
+                            <option value="Çocuk İmmünolojisi ve Alerji Hastalıkları">Çocuk İmmünolojisi ve Alerji Hastalıkları</option>
+                            <option value="Çocuk Kardiyolojisi">Çocuk Kardiyolojisi</option>
+                            <option value="Çocuk Nörolojisi">Çocuk Nörolojisi</option>
+                            <option value="Çocuk Sağlığı ve Hastalıkları">Çocuk Sağlığı ve Hastalıkları</option>
+                            <option value="Dermatoloji (Cildiye)">Dermatoloji (Cildiye)</option>
+                            <option value="Enfeksiyon Hastalıkları ve Klinik Mikrobiyoloji">Enfeksiyon Hastalıkları ve Klinik Mikrobiyoloji</option>
+                            <option value="Endokrinoloji ve Metabolizma Hastalıkları">Endokrinoloji ve Metabolizma Hastalıkları</option>
+                            <option value="Fiziksel Tıp ve Rehabilitasyon (FTR)">Fiziksel Tıp ve Rehabilitasyon (FTR)</option>
+                            <option value="Gastroenteroloji">Gastroenteroloji</option>
+                            <option value="Genel Cerrahi">Genel Cerrahi</option>
+                            <option value="Geriatri">Geriatri</option>
+                            <option value="Göz Hastalıkları (Oftalmoloji)">Göz Hastalıkları (Oftalmoloji)</option>
+                            <option value="Göğüs Cerrahisi">Göğüs Cerrahisi</option>
+                            <option value="Göğüs Hastalıkları (Pulmonoloji)">Göğüs Hastalıkları (Pulmonoloji)</option>
+                            <option value="Hematoloji">Hematoloji</option>
+                            <option value="İç Hastalıkları (Dahiliye)">İç Hastalıkları (Dahiliye)</option>
+                            <option value="İmmünoloji ve Alerji Hastalıkları (Erişkin)">İmmünoloji ve Alerji Hastalıkları (Erişkin)</option>
+                            <option value="Kadın Hastalıkları ve Doğum">Kadın Hastalıkları ve Doğum</option>
+                            <option value="Kalp ve Damar Cerrahisi">Kalp ve Damar Cerrahisi</option>
+                            <option value="Kardiyoloji">Kardiyoloji</option>
+                            <option value="Kulak Burun Boğaz Hastalıkları (KBB)">Kulak Burun Boğaz Hastalıkları (KBB)</option>
+                            <option value="Nefroloji">Nefroloji</option>
+                            <option value="Neonatoloji (Yenidoğan)">Neonatoloji (Yenidoğan)</option>
+                            <option value="Nöroloji">Nöroloji</option>
+                            <option value="Nükleer Tıp">Nükleer Tıp</option>
+                            <option value="Ortopedi ve Travmatoloji">Ortopedi ve Travmatoloji</option>
+                            <option value="Perinatoloji (Riskli Gebelikler)">Perinatoloji (Riskli Gebelikler)</option>
+                            <option value="Plastik, Rekonstrüktif ve Estetik Cerrahi">Plastik, Rekonstrüktif ve Estetik Cerrahi</option>
+                            <option value="Psikiyatri">Psikiyatri</option>
+                            <option value="Radyasyon Onkolojisi">Radyasyon Onkolojisi</option>
+                            <option value="Radyoloji">Radyoloji</option>
+                            <option value="Romatoloji">Romatoloji</option>
+                            <option value="Spor Hekimliği">Spor Hekimliği</option>
+                            <option value="Tıbbi Genetik">Tıbbi Genetik</option>
+                            <option value="Tıbbi Onkoloji">Tıbbi Onkoloji</option>
+                            <option value="Tıbbi Patoloji">Tıbbi Patoloji</option>
+                            <option value="Üroloji">Üroloji</option>
+                            <option value="Yoğun Bakım">Yoğun Bakım</option>
+
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label>Telefon</label>
+                        <input type="text" id="DoctorPhoneNumber" name="DoctorPhoneNumber" class="form-control" placeholder="0 (5XX) XXX XXXX" maxlength="15" />
+                    </div>
+                    <div class="mb-3">
+                        <label>Email</label>
+                        <input type="email" id="DoctorEmail" name="DoctorEmail" class="form-control" />
+                    </div>
+                    <div class="mb-3">
+                        <label>Şifre</label>
+                        <input type="text" id="DoctorPassword" name="DoctorPassword" class="form-control" />
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" onclick="closeUpdateDoctorModal()">Kapat</button>
+                <button type="button" class="btn btn-primary" id="updateDoctorBtn">Güncelle</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,182 @@
+﻿@{
+    ViewData["Title"] = "Hastane Randevu Sistemi";
+}
+
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container">
+        <div class="hero-content animate-fadeInUp">
+            <h1 class="hero-title">Hastane Randevu Sistemi</h1>
+            <p class="hero-subtitle">Sağlığınız için modern ve güvenli randevu deneyimi</p>
+            
+            <div class="card-grid">
+                <!-- Hasta Kartı -->
+                <div class="feature-card animate-fadeInLeft">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-injured"></i>
+                    </div>
+                    <h3 class="feature-title">Hasta Paneli</h3>
+                    <p class="feature-description">
+                        Randevu alın, randevularınızı yönetin ve profil bilgilerinizi güncelleyin. 
+                        Hızlı ve kolay bir şekilde sağlık hizmetlerine erişin.
+                    </p>
+                    <div class="d-grid gap-2">
+                        <a asp-controller="Patient" asp-action="Login" class="btn btn-primary btn-lg">
+                            <i class="fas fa-sign-in-alt"></i> Hasta Girişi
+                        </a>
+                        <a asp-controller="Patient" asp-action="Register" class="btn btn-outline-primary">
+                            <i class="fas fa-user-plus"></i> Hasta Kayıt
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Doktor Kartı -->
+                <div class="feature-card animate-fadeInUp">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h3 class="feature-title">Doktor Paneli</h3>
+                    <p class="feature-description">
+                        Size alınan randevuları görüntüleyin, hasta bilgilerini inceleyin ve 
+                        profil bilgilerinizi güncelleyin. Profesyonel çalışma ortamınız.
+                    </p>
+                    <div class="d-grid gap-2">
+                        <a asp-controller="Doctor" asp-action="Login" class="btn btn-success btn-lg">
+                            <i class="fas fa-sign-in-alt"></i> Doktor Girişi
+                        </a>
+                        <a asp-controller="Doctor" asp-action="Register" class="btn btn-outline-success">
+                            <i class="fas fa-user-plus"></i> Doktor Kayıt
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Admin Kartı -->
+                <div class="feature-card animate-fadeInLeft">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h3 class="feature-title">Admin Paneli</h3>
+                    <p class="feature-description">
+                        Sistem yönetimi, hasta ve doktor bilgilerini görüntüleyin, 
+                        randevuları takip edin. Kapsamlı yönetim araçları.
+                    </p>
+                    <div class="d-grid">
+                        <a asp-controller="Admin" asp-action="Login" class="btn btn-warning btn-lg">
+                            <i class="fas fa-sign-in-alt"></i> Admin Girişi
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="panel-container">
+    <div class="container">
+        <div class="content-header animate-fadeInUp">
+            <h2 class="content-title text-gradient">Sistem Özellikleri</h2>
+            <p class="content-subtitle">Modern teknoloji ile sağlık hizmetlerinizi kolaylaştırın</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 text-center animate-fadeInLeft">
+                    <div class="card-body">
+                        <div class="feature-icon mx-auto mb-3" style="width: 60px; height: 60px; font-size: 1.5rem;">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <h5 class="card-title">Kolay Randevu</h5>
+                        <p class="card-text">Sadece birkaç tıklama ile randevu alın. Doktor seçimi ve zaman belirleme çok kolay.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 text-center animate-fadeInUp">
+                    <div class="card-body">
+                        <div class="feature-icon mx-auto mb-3" style="width: 60px; height: 60px; font-size: 1.5rem;">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h5 class="card-title">7/24 Erişim</h5>
+                        <p class="card-text">İstediğiniz zaman, istediğiniz yerden randevu alın. Sistem her zaman açık.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 text-center animate-fadeInUp">
+                    <div class="card-body">
+                        <div class="feature-icon mx-auto mb-3" style="width: 60px; height: 60px; font-size: 1.5rem;">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h5 class="card-title">Güvenli Sistem</h5>
+                        <p class="card-text">Kişisel bilgileriniz en yüksek güvenlik standartları ile korunur.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 text-center animate-fadeInLeft">
+                    <div class="card-body">
+                        <div class="feature-icon mx-auto mb-3" style="width: 60px; height: 60px; font-size: 1.5rem;">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h5 class="card-title">Mobil Uyumlu</h5>
+                        <p class="card-text">Telefon, tablet veya bilgisayar - her cihazdan mükemmel deneyim.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Statistics Section -->
+        <div class="row g-4 mt-4">
+            <div class="col-12">
+                <div class="card animate-fadeInUp">
+                    <div class="card-body text-center py-5">
+                        <h3 class="text-gradient mb-4">Neden Bizi Seçmelisiniz?</h3>
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <div class="d-flex flex-column align-items-center">
+                                    <div class="feature-icon mb-3" style="width: 80px; height: 80px; font-size: 2rem;">
+                                        <i class="fas fa-users"></i>
+                                    </div>
+                                    <h4 class="text-gradient">1000+</h4>
+                                    <p class="text-muted">Mutlu Hasta</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="d-flex flex-column align-items-center">
+                                    <div class="feature-icon mb-3" style="width: 80px; height: 80px; font-size: 2rem;">
+                                        <i class="fas fa-user-md"></i>
+                                    </div>
+                                    <h4 class="text-gradient">50+</h4>
+                                    <p class="text-muted">Uzman Doktor</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="d-flex flex-column align-items-center">
+                                    <div class="feature-icon mb-3" style="width: 80px; height: 80px; font-size: 2rem;">
+                                        <i class="fas fa-calendar-alt"></i>
+                                    </div>
+                                    <h4 class="text-gradient">5000+</h4>
+                                    <p class="text-muted">Başarılı Randevu</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="text-center py-4 mt-5" style="background: var(--dark-color); color: white;">
+    <div class="container">
+        <p class="mb-0">&copy; 2024 Hastane Randevu Sistemi. Tüm hakları saklıdır.</p>
+        <p class="mb-0 mt-2">
+            <small>Modern teknoloji ile sağlık hizmetlerinizi kolaylaştırıyoruz.</small>
+        </p>
+    </div>
+</footer>

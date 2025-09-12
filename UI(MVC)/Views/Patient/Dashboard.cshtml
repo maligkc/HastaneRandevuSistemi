@@ -1,0 +1,870 @@
+@{
+    ViewData["Title"] = "Hasta Paneli";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var patientName = Context.Session.GetString("PatientName");
+}
+
+<div class="panel-container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h3 class="sidebar-title">Hasta Paneli</h3>
+            <p class="sidebar-subtitle">Hoş geldiniz, @patientName</p>
+        </div>
+        <nav class="sidebar-nav">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#" onclick="loadContent('dashboard')">
+                        <i class="fas fa-tachometer-alt"></i> Ana Sayfa
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="loadContent('appointments')">
+                        <i class="fas fa-calendar-alt"></i> Randevularım
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="loadContent('book-appointment')">
+                        <i class="fas fa-plus-circle"></i> Randevu Al
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="loadContent('profile')">
+                        <i class="fas fa-user"></i> Profilim
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-action="Logout">
+                        <i class="fas fa-sign-out-alt"></i> Çıkış Yap
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="content-header">
+            <h1 class="content-title" id="page-title">Anasayfa</h1>
+            <p class="content-subtitle">Randevularınızı yönetin ve sağlık hizmetlerine erişin</p>
+        </div>
+        <div id="content-area">
+                <!-- Dashboard Content -->
+                <div id="dashboard-content">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card text-white bg-primary mb-3">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between">
+                                        <div>
+                                            <h4 class="card-title">Randevularım</h4>
+                                            <p class="card-text">Aktif randevularınızı görüntüleyin</p>
+                                        </div>
+                                        <div class="align-self-center">
+                                            <i class="fas fa-calendar-alt fa-2x"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="#" onclick="loadContent('appointments')" class="text-white text-decoration-none">
+                                        Randevularımı Gör <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card text-white bg-success mb-3">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between">
+                                        <div>
+                                            <h4 class="card-title">Randevu Al</h4>
+                                            <p class="card-text">Yeni randevu alın</p>
+                                        </div>
+                                        <div class="align-self-center">
+                                            <i class="fas fa-plus-circle fa-2x"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="#" onclick="loadContent('book-appointment')" class="text-white text-decoration-none">
+                                        Randevu Al <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card text-white bg-info mb-3">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between">
+                                        <div>
+                                            <h4 class="card-title">Profilim</h4>
+                                            <p class="card-text">Bilgilerinizi güncelleyin</p>
+                                        </div>
+                                        <div class="align-self-center">
+                                            <i class="fas fa-user fa-2x"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="#" onclick="loadContent('profile')" class="text-white text-decoration-none">
+                                        Profilimi Gör <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dynamic Content Area -->
+                <div id="dynamic-content"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function loadContent(type) {
+        // Update active nav item
+        document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
+        event.target.classList.add('active');
+
+        // Update page title
+        const titles = {
+            'dashboard': 'Dashboard',
+            'appointments': 'Randevularım',
+            'book-appointment': 'Randevu Al',
+            'profile': 'Profilim'
+        };
+        document.getElementById('page-title').textContent = titles[type];
+
+        // Hide dashboard content
+        document.getElementById('dashboard-content').style.display = 'none';
+        document.getElementById('dynamic-content').innerHTML = '<div class="text-center"><div class="spinner-border" role="status"><span class="visually-hidden">Yükleniyor...</span></div></div>';
+
+        // Load content based on type
+        switch (type) {
+            case 'appointments':
+                loadAppointments();
+                break;
+            case 'book-appointment':
+                loadBookAppointment();
+                break;
+            case 'profile':
+                loadProfile();
+                break;
+            case 'dashboard':
+                document.getElementById('dashboard-content').style.display = 'block';
+                document.getElementById('dynamic-content').innerHTML = '';
+                break;
+        }
+    }
+
+    function loadAppointments() {
+        fetch('@Url.Action("MyAppointments", "Patient")')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('dynamic-content').innerHTML = data;
+            })
+            .catch(error => {
+                document.getElementById('dynamic-content').innerHTML = '<div class="alert alert-danger">Randevular yüklenirken hata oluştu.</div>';
+            });
+    }
+
+    function loadBookAppointment() {
+        window.location.href = '@Url.Action("BookAppointment", "Patient")';
+    }
+
+    function loadProfile() {
+        fetch('@Url.Action("MyProfile", "Patient")')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('dynamic-content').innerHTML = data;
+                
+                // Telefon alanını formatla
+                setTimeout(() => {
+                    const phoneInput = document.getElementById('patientPhoneNumber');
+                    if (phoneInput) {
+                        // Mevcut değeri formatla (veritabanından gelen temiz format: 05357908732)
+                        const currentValue = phoneInput.value;
+                        if (currentValue) {
+                            phoneInput.value = formatPhoneDisplay(currentValue);
+                        }
+                        
+                        // Input event listener ekle
+                        phoneInput.addEventListener('input', function() {
+                            formatPhoneNumber(this);
+                        });
+                    }
+                }, 100);
+            })
+            .catch(error => {
+                document.getElementById('dynamic-content').innerHTML = '<div class="alert alert-danger">Profil bilgileri yüklenirken hata oluştu.</div>';
+            });
+    }
+
+    // Global updateProfile fonksiyonu
+    // Telefon numarası formatlaması
+    function formatPhoneNumber(input) {
+        let value = input.value.replace(/\D/g, ''); // Sadece rakamları al
+        
+        // Eğer 0 ile başlamıyorsa, başına 0 ekle
+        if (value.length > 0 && !value.startsWith('0')) {
+            value = '0' + value;
+        }
+        
+        // Maksimum 11 karakter (0 + 10 rakam)
+        if (value.length > 11) {
+            value = value.slice(0, 11);
+        }
+        
+        // Formatla: 0 (535) 790 8732
+        if (value.length > 0) {
+            if (value.length <= 1) {
+                value = value; // Sadece 0
+            } else if (value.length <= 4) {
+                value = value.slice(0, 1) + ' (' + value.slice(1);
+            } else if (value.length <= 7) {
+                value = value.slice(0, 1) + ' (' + value.slice(1, 4) + ') ' + value.slice(4);
+            } else if (value.length <= 9) {
+                value = value.slice(0, 1) + ' (' + value.slice(1, 4) + ') ' + value.slice(4, 7) + ' ' + value.slice(7);
+            } else {
+                value = value.slice(0, 1) + ' (' + value.slice(1, 4) + ') ' + value.slice(4, 7) + ' ' + value.slice(7, 9) + value.slice(9);
+            }
+        }
+        
+        input.value = value;
+    }
+
+    // Telefon numarasını temizle (sadece rakamlar)
+    function cleanPhoneNumber(phoneNumber) {
+        return phoneNumber.replace(/\D/g, '');
+    }
+
+    // Sayfa yüklendiğinde telefon alanını formatla
+    document.addEventListener('DOMContentLoaded', function() {
+        const phoneInput = document.getElementById('patientPhoneNumber');
+        if (phoneInput) {
+            // Mevcut değeri formatla
+            const currentValue = phoneInput.value;
+            if (currentValue) {
+                phoneInput.value = formatPhoneDisplay(currentValue);
+            }
+            
+            // Input event listener ekle
+            phoneInput.addEventListener('input', function() {
+                formatPhoneNumber(this);
+            });
+        }
+        
+        // Modal kapatma event listener'ları
+        document.addEventListener('click', function(e) {
+            if (e.target.classList.contains('btn-close') || 
+                e.target.classList.contains('btn-secondary') ||
+                e.target.textContent === 'İptal') {
+                e.preventDefault();
+                e.stopPropagation();
+                closePasswordModal();
+            }
+        });
+        
+        // ESC tuşu ile modal kapatma
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                e.preventDefault();
+                e.stopPropagation();
+                closePasswordModal();
+                closeEditAppointmentModal();
+            }
+        });
+        
+        // Modal backdrop click to close
+        document.addEventListener('click', function(e) {
+            if (e.target.classList.contains('modal') && e.target.classList.contains('show')) {
+                e.preventDefault();
+                e.stopPropagation();
+                closePasswordModal();
+                closeEditAppointmentModal();
+            }
+        });
+    });
+
+    // Telefon numarasını görüntüleme formatına çevir
+    function formatPhoneDisplay(phoneNumber) {
+        const cleaned = phoneNumber.replace(/\D/g, '');
+        if (cleaned.length === 11 && cleaned.startsWith('0')) {
+            return cleaned.slice(0, 1) + ' (' + cleaned.slice(1, 4) + ') ' + cleaned.slice(4, 7) + ' ' + cleaned.slice(7, 9) + cleaned.slice(9, 11);
+        }
+        return phoneNumber;
+    }
+
+    // Şifre modalını aç
+    function openPasswordModal() {
+        try {
+            const modalElement = document.getElementById('passwordModal');
+            
+            if (modalElement) {
+                // Form'u temizle
+                const form = document.getElementById('passwordForm');
+                if (form) {
+                    form.reset();
+                }
+                
+                // Modal'ı manuel olarak göster
+                modalElement.style.display = 'flex';
+                modalElement.classList.add('show');
+                modalElement.setAttribute('aria-hidden', 'false');
+                
+                // İlk input'a odaklan
+                setTimeout(() => {
+                    const firstInput = document.getElementById('currentPassword');
+                    if (firstInput) {
+                        firstInput.focus();
+                    }
+                }, 100);
+            }
+        } catch (error) {
+            console.error('Modal açma hatası:', error);
+        }
+    }
+
+    // Modal kapatma fonksiyonu
+    function closePasswordModal() {
+        try {
+            const modalElement = document.getElementById('passwordModal');
+            
+            if (modalElement) {
+                modalElement.style.display = 'none';
+                modalElement.classList.remove('show');
+                modalElement.setAttribute('aria-hidden', 'true');
+                
+                // Form'u temizle
+                const form = document.getElementById('passwordForm');
+                if (form) {
+                    form.reset();
+                }
+            }
+        } catch (error) {
+            console.error('Modal kapatma hatası:', error);
+        }
+    }
+
+    // Randevu modalını aç
+    function openEditAppointmentModal() {
+        try {
+            const modalElement = document.getElementById('editAppointmentModal');
+            
+            if (modalElement) {
+                // Form'u temizle
+                const form = document.getElementById('editAppointmentForm');
+                if (form) {
+                    form.reset();
+                }
+                
+                // Modal'ı manuel olarak göster
+                modalElement.style.display = 'flex';
+                modalElement.classList.add('show');
+                modalElement.setAttribute('aria-hidden', 'false');
+                
+                // Body scroll'u engelle
+                document.body.style.overflow = 'hidden';
+                document.body.classList.add('modal-open');
+                
+                // İlk input'a odaklan
+                setTimeout(() => {
+                    const firstInput = document.getElementById('editDoctorId');
+                    if (firstInput) {
+                        firstInput.focus();
+                    }
+                }, 100);
+            }
+        } catch (error) {
+            console.error('Randevu modal açma hatası:', error);
+        }
+    }
+
+    // Randevu modalını kapat
+    function closeEditAppointmentModal() {
+        try {
+            const modalElement = document.getElementById('editAppointmentModal');
+            
+            if (modalElement) {
+                // Modal'ı gizle
+                modalElement.style.display = 'none';
+                modalElement.classList.remove('show');
+                modalElement.setAttribute('aria-hidden', 'true');
+                
+                // Body scroll'u geri aç
+                document.body.style.overflow = '';
+                document.body.classList.remove('modal-open');
+                
+                // Form'u temizle
+                const form = document.getElementById('editAppointmentForm');
+                if (form) {
+                    form.reset();
+                }
+            }
+        } catch (error) {
+            console.error('Randevu modal kapatma hatası:', error);
+        }
+    }
+
+    // Randevu düzenleme
+    function editAppointment(appointmentId) {
+        try {
+            // Randevu ID'sini set et
+            document.getElementById('editAppointmentId').value = appointmentId;
+            
+            // Tablodan veriyi al
+            const appointmentRow = document.querySelector(`button[onclick*="editAppointment(${appointmentId})"]`).closest('tr');
+            if (appointmentRow) {
+                const cells = appointmentRow.querySelectorAll('td');
+                const doctorName = cells[0].textContent.trim();
+                const appointmentDate = cells[1].textContent.trim();
+                const appointmentTime = cells[2].textContent.trim();
+                
+                // Doktorları yükle ve modal'ı aç
+                loadDoctorsForEdit().then(() => {
+                    // Doktor seçimini yap
+                    const doctorSelect = document.getElementById('editDoctorId');
+                    for (let option of doctorSelect.options) {
+                        if (option.textContent.trim() === doctorName) {
+                            doctorSelect.value = option.value;
+                            break;
+                        }
+                    }
+                    
+                    // Tarihi formatla (DD.MM.YYYY -> YYYY-MM-DD)
+                    const formattedDate = convertDateFormat(appointmentDate);
+                    document.getElementById('editAppointmentDate').value = formattedDate;
+                    
+                    // Saati formatla (HH:mm -> HH:mm:ss)
+                    const formattedTime = convertTimeFormat(appointmentTime);
+                    document.getElementById('editAppointmentTime').value = formattedTime;
+                    
+                    // Modal'ı aç
+                    openEditAppointmentModal();
+                });
+            }
+        } catch (error) {
+            console.error('Randevu düzenleme hatası:', error);
+        }
+    }
+
+    // Doktorları yükle (düzenleme için)
+    function loadDoctorsForEdit() {
+        return fetch('@Url.Action("GetDoctors", "Patient")')
+            .then(response => response.json())
+            .then(data => {
+                const doctorSelect = document.getElementById('editDoctorId');
+                doctorSelect.innerHTML = '<option value="">Doktor Seçiniz</option>';
+                
+                data.forEach(doctor => {
+                    const option = document.createElement('option');
+                    option.value = doctor.doctorId;
+                    option.textContent = doctor.doctorName;
+                    doctorSelect.appendChild(option);
+                });
+            })
+            .catch(error => {
+                console.error('Doktorlar yüklenirken hata:', error);
+            });
+    }
+
+    // Randevu detaylarını yükle
+    function loadAppointmentDetails(appointmentId) {
+        return fetch(`@Url.Action("GetAppointmentDetails", "Patient")?appointmentId=${appointmentId}`)
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Doktor seçimini yap
+                    document.getElementById('editDoctorId').value = data.appointment.doctorId;
+                    
+                    // Tarihi formatla (YYYY-MM-DD)
+                    const appointmentDate = new Date(data.appointment.appointmentDate);
+                    const formattedDate = appointmentDate.toISOString().split('T')[0];
+                    document.getElementById('editAppointmentDate').value = formattedDate;
+                    
+                    // Saati formatla (HH:mm:ss)
+                    const timeString = data.appointment.appointmentTime;
+                    let formattedTime = timeString;
+                    if (timeString && !timeString.includes(':')) {
+                        formattedTime = timeString + ':00';
+                    } else if (timeString && timeString.split(':').length === 2) {
+                        formattedTime = timeString + ':00';
+                    }
+                    document.getElementById('editAppointmentTime').value = formattedTime;
+                }
+            })
+            .catch(error => {
+                console.error('Randevu detayları yüklenirken hata:', error);
+            });
+    }
+
+    // Şifre güncelleme
+    function updatePassword() {
+        const currentPassword = document.getElementById('currentPassword').value;
+        const newPassword = document.getElementById('newPassword').value;
+        const confirmPassword = document.getElementById('confirmPassword').value;
+        
+        // Validasyon
+        if (!currentPassword) {
+            showAlert('Lütfen mevcut şifrenizi girin!', 'warning', 'Uyarı');
+            return;
+        }
+        
+        if (!newPassword) {
+            showAlert('Lütfen yeni şifrenizi girin!', 'warning', 'Uyarı');
+            return;
+        }
+        
+        if (newPassword.length > 10) {
+            showAlert('Şifre maksimum 10 karakter olabilir!', 'warning', 'Uyarı');
+            return;
+        }
+        
+        if (newPassword !== confirmPassword) {
+            showAlert('Yeni şifreler uyuşmuyor!', 'warning', 'Uyarı');
+            return;
+        }
+        
+        const patientIdElement = document.getElementById('patientId');
+        const patientId = patientIdElement ? parseInt(patientIdElement.value) : 0;
+        
+        const passwordData = {
+            PatientId: patientId,
+            CurrentPassword: currentPassword,
+            NewPassword: newPassword
+        };
+        
+        fetch('@Url.Action("UpdatePassword", "Patient")', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(passwordData)
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                showToast('Şifreniz başarıyla güncellendi!', 'success');
+                // Modal'ı kapat
+                closePasswordModal();
+            } else {
+                showAlert('Hata: ' + data.message, 'error', 'Hata');
+            }
+        })
+        .catch(error => {
+            showAlert('Bir hata oluştu: ' + error, 'error', 'Hata');
+        });
+    }
+
+    function updateProfile() {
+        const patientIdElement = document.getElementById('patientId');
+        const patientId = patientIdElement ? parseInt(patientIdElement.value) : 0;
+        
+        console.log('PatientId:', patientId);
+        console.log('PatientId Element:', patientIdElement);
+        
+        const patientData = {
+            PatientId: patientId,
+            PatientFullName: document.getElementById('patientFullName').value,
+            PatientTcNo: document.getElementById('patientTcNo').value,
+            PatientAge: parseInt(document.getElementById('patientAge').value),
+            PatientGender: document.getElementById('patientGender').value,
+            PatientEmail: document.getElementById('patientEmail').value,
+            PatientPhoneNumber: cleanPhoneNumber(document.getElementById('patientPhoneNumber').value)
+        };
+        
+        console.log('Patient Data:', patientData);
+
+        fetch('@Url.Action("UpdateProfile", "Patient")', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(patientData)
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                showToast('Profil bilgileriniz başarıyla güncellendi!', 'success');
+            } else {
+                showAlert('Hata: ' + data.message, 'error', 'Hata');
+            }
+        })
+        .catch(error => {
+            showAlert('Bir hata oluştu: ' + error, 'error', 'Hata');
+        });
+    }
+
+    // Randevu düzenleme fonksiyonları
+    function editAppointment(appointmentId) {
+        // Önce doktorları yükle
+        loadDoctorsForEdit().then(() => {
+            // Randevu bilgilerini bul ve modalı doldur
+            fetch('@Url.Action("MyAppointments", "Patient")')
+                .then(response => response.text())
+                .then(html => {
+                    // Geçici bir div oluştur ve HTML'i parse et
+                    const tempDiv = document.createElement('div');
+                    tempDiv.innerHTML = html;
+                    
+                    // Randevu verilerini bul
+                    const appointmentRows = tempDiv.querySelectorAll('tbody tr');
+                    let selectedAppointment = null;
+                    
+                    appointmentRows.forEach(row => {
+                        const editButton = row.querySelector('button[onclick*="editAppointment"]');
+                        if (editButton && editButton.getAttribute('onclick').includes(appointmentId)) {
+                            const cells = row.querySelectorAll('td');
+                            selectedAppointment = {
+                                appointmentId: appointmentId,
+                                doctorName: cells[0].textContent.trim(),
+                                appointmentDate: cells[1].textContent.trim(),
+                                appointmentTime: cells[2].textContent.trim()
+                            };
+                        }
+                    });
+                    
+                    if (selectedAppointment) {
+                        // Modal'ı doldur
+                        document.getElementById('editAppointmentId').value = appointmentId;
+                        document.getElementById('editAppointmentDate').value = convertDateFormat(selectedAppointment.appointmentDate);
+                        document.getElementById('editAppointmentTime').value = convertTimeFormat(selectedAppointment.appointmentTime);
+                        
+                        // Doktor seçimini ayarla
+                        const doctorSelect = document.getElementById('editDoctorId');
+                        const doctorName = selectedAppointment.doctorName;
+                        for (let option of doctorSelect.options) {
+                            if (option.text.includes(doctorName)) {
+                                option.selected = true;
+                                break;
+                            }
+                        }
+                        
+                        // Modal'ı göster (Bootstrap JS kullanmadan)
+                        openEditAppointmentModal();
+                    }
+                })
+                .catch(error => {
+                    console.error('Randevu bilgileri yüklenirken hata:', error);
+                });
+        });
+    }
+
+    function loadDoctorsForEdit() {
+        return fetch('@Url.Action("BookAppointment", "Patient")')
+            .then(response => response.text())
+            .then(html => {
+                // Geçici bir div oluştur ve HTML'i parse et
+                const tempDiv = document.createElement('div');
+                tempDiv.innerHTML = html;
+                
+                // Doktor seçeneklerini bul
+                const doctorSelect = tempDiv.querySelector('select[name="DoctorId"]');
+                const editDoctorSelect = document.getElementById('editDoctorId');
+                
+                if (doctorSelect && editDoctorSelect) {
+                    // Mevcut seçenekleri temizle (ilk seçenek hariç)
+                    editDoctorSelect.innerHTML = '<option value="">Doktor Seçiniz</option>';
+                    
+                    // Doktor seçeneklerini kopyala
+                    const options = doctorSelect.querySelectorAll('option');
+                    options.forEach(option => {
+                        if (option.value !== '') {
+                            const newOption = document.createElement('option');
+                            newOption.value = option.value;
+                            newOption.textContent = option.textContent;
+                            editDoctorSelect.appendChild(newOption);
+                        }
+                    });
+                }
+            })
+            .catch(error => {
+                console.error('Doktorlar yüklenirken hata:', error);
+            });
+    }
+
+    function convertDateFormat(turkishDate) {
+        // DD.MM.YYYY -> YYYY-MM-DD
+        const parts = turkishDate.split('.');
+        if (parts.length === 3) {
+            return `${parts[2]}-${parts[1].padStart(2, '0')}-${parts[0].padStart(2, '0')}`;
+        }
+        return turkishDate;
+    }
+
+    function convertTimeFormat(turkishTime) {
+        // HH:mm -> HH:mm:ss
+        if (turkishTime && !turkishTime.includes(':')) {
+            return turkishTime;
+        }
+        return turkishTime + ':00';
+    }
+
+    function saveAppointmentChanges() {
+        const appointmentId = document.getElementById('editAppointmentId').value;
+        const doctorId = document.getElementById('editDoctorId').value;
+        const appointmentDate = document.getElementById('editAppointmentDate').value;
+        const appointmentTime = document.getElementById('editAppointmentTime').value;
+
+        // Validasyon
+        if (!doctorId) {
+            showAlert('Lütfen bir doktor seçin!', 'warning', 'Uyarı');
+            return;
+        }
+        if (!appointmentDate) {
+            showAlert('Lütfen randevu tarihi seçin!', 'warning', 'Uyarı');
+            return;
+        }
+        if (!appointmentTime) {
+            showAlert('Lütfen randevu saati seçin!', 'warning', 'Uyarı');
+            return;
+        }
+
+        const appointmentData = {
+            AppointmentId: parseInt(appointmentId),
+            DoctorId: parseInt(doctorId),
+            AppointmentDate: appointmentDate,
+            AppointmentTime: appointmentTime,
+            AppointmentStatus: 1 // Her zaman aktif olarak ayarla
+        };
+
+        console.log('Gönderilen veri:', appointmentData);
+
+        fetch('@Url.Action("UpdateAppointment", "Patient")', {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(appointmentData)
+        })
+        .then(response => {
+            console.log('Response status:', response.status);
+            return response.json();
+        })
+        .then(data => {
+            console.log('Response data:', data);
+            if (data.success) {
+                // Modal'ı kapat
+                closeEditAppointmentModal();
+                loadAppointments(); // Randevuları yenile
+                showToast('Randevu başarıyla güncellendi!', 'success');
+            } else {
+                showAlert('Hata: ' + data.message, 'error', 'Hata');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            showAlert('Bir hata oluştu: ' + error, 'error', 'Hata');
+        });
+    }
+
+    function deleteAppointment(appointmentId) {
+        showConfirmAlert(
+            'Bu randevuyu silmek istediğinizden emin misiniz?', 
+            'warning', 
+            'Randevu Silme Onayı',
+            function() {
+                // Evet butonuna tıklandığında çalışacak
+                fetch('@Url.Action("DeleteAppointment", "Patient")' + '?id=' + appointmentId, {
+                    method: 'POST'
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        loadAppointments(); // Randevuları yenile
+                        showToast('Randevu başarıyla silindi!', 'success');
+                    } else {
+                        showAlert('Hata: ' + data.message, 'error', 'Hata');
+                    }
+                })
+                .catch(error => {
+                    showAlert('Bir hata oluştu: ' + error, 'error', 'Hata');
+                });
+            },
+            function() {
+                // Vazgeç butonuna tıklandığında çalışacak
+                showToast('İşlem iptal edildi.', 'info');
+            }
+        );
+    }
+</script>
+
+<style>
+    .sidebar {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 100;
+        padding: 48px 0 0;
+        box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+    }
+
+    .sidebar .nav-link {
+        font-weight: 500;
+        color: #333;
+    }
+
+    /* Kart boyutlarını eşitle */
+    .appointment-cards .card {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .appointment-cards .card-body {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .appointment-cards .table-responsive {
+        flex: 1;
+    }
+
+    .sidebar .nav-link:hover {
+        color: #007bff;
+    }
+
+    .sidebar .nav-link.active {
+        color: #007bff;
+    }
+</style>
+
+<script>
+    // Background click ile modal kapatma ve kaçak backdrop temizliği
+    $(document).ready(function() {
+        // Background tıklandığında kapat
+        $(document).on('click', '#editAppointmentModal', function(e) {
+            if (e.target === this) {
+                closeEditAppointmentModal();
+            }
+        });
+        
+        // ESC tuşu ile modal kapatma
+        $(document).on('keydown', function(e) {
+            if (e.key === 'Escape') {
+                const modal = document.getElementById('editAppointmentModal');
+                if (modal && modal.style.display === 'flex') {
+                    closeEditAppointmentModal();
+                }
+            }
+        });
+
+        // Her modal açılışında eski Bootstrap backdrop ve body state'ini temizle
+        $(document).on('click', '.btn-appointment-edit, .open-edit-appointment', function() {
+            $('.modal-backdrop').remove();
+            $('body').removeClass('modal-open').css('overflow', '');
+        });
+
+        // Güvenlik için periyodik temizlik (kısa süre sonra)
+        $(document).on('shown.bs.modal hidden.bs.modal', function() {
+            setTimeout(function() {
+                $('.modal-backdrop').remove();
+                $('body').removeClass('modal-open').css('overflow', '');
+            }, 50);
+        });
+    });
+</script>
+

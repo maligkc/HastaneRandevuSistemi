@@ -1,0 +1,45 @@
+﻿@using Entities.DTOs
+@model List<AppointmentDto>
+
+<h2>Randevular</h2>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Hasta İsmi</th>
+            <th>Hasta TC</th>
+            <th>Doktor İsmi</th>
+            <th>Alan</th>
+            <th>Tarih</th>
+            <th>Saat</th>
+            <th>Randevu Durumu</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var appt in Model)
+        {
+            <tr>
+                <td>@appt.AppointmentId</td>
+                <td>@appt.PatientFullName</td>
+                <td>@appt.PatientTcNo</td>
+                <td>@appt.DoctorFullName</td>
+                <td>@appt.DoctorSpecialization</td>
+                <td>@appt.AppointmentDate.ToShortDateString()</td>
+                <td>@appt.AppointmentTime.ToString(@"hh\:mm")</td>
+                @if (appt.AppointmentStatus == 1)
+                {
+                    <td>Aktif Randevu</td>
+                }
+                else if (appt.AppointmentStatus == -1)
+                {
+                    <td>İptal edilmiş veya tarihi geçmiş randevu.</td>
+                }
+                else
+                {
+                    <td>Randevu durumu girilmemiş!</td>
+                }
+
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,141 @@
+﻿@using Entities.DTOs
+@* @model List<Patient>
+
+<h2>Hastalar</h2>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Ad Soyad</th>
+            <th>Email</th>
+            <th>Telefon</th>
+            <th>Güncelle</th>
+            <th>Sil</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var patient in Model)
+        {
+            <tr>
+                <td>@patient.PatientId</td>
+                <td>@patient.PatientFullName</td>
+                <td>@patient.PatientEmail</td>
+                <td>@patient.PatientPhoneNumber</td>
+                <td><a class="btn btn-secondary">Güncelle</a></td>
+                <td><a class="btn btn-danger">Sil</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+ *@
+
+
+
+@model List<PatientDto>
+
+
+<h2>Hastalar</h2>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Ad Soyad</th>
+            <th>TC No</th>
+            <th>Yaş</th>
+            <th>Cinsiyet</th>
+            <th>Email</th>
+            <th>Şifre</th>
+            <th>Telefon</th>
+            <th>Güncelle</th>
+            <th>Sil</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var p in Model)
+        {
+            <tr data-row-id="@p.PatientId">
+                <td>@p.PatientId</td>
+                <td class="c-name">@p.PatientFullName</td>
+                <td class="c-tcno">@p.PatientTcNo</td>
+                <td class="c-age">@p.PatientAge</td>
+                <td class="c-gender">@p.PatientGender</td>
+                <td class="c-email">@p.PatientEmail</td>
+                <td class="c-password">@p.PatientPassword</td>
+                <td class="c-phone">@p.PatientPhoneNumber</td>
+                <td>
+                    <button type="button"
+                            class="btn btn-secondary btn-patient-update"
+                            data-id="@p.PatientId"
+                            data-name="@p.PatientFullName"
+                            data-tcno="@p.PatientTcNo"
+                            data-age="@p.PatientAge"
+                            data-gender="@p.PatientGender"
+                            data-email="@p.PatientEmail"
+                            data-password="@p.PatientPassword"
+                            data-phone="@p.PatientPhoneNumber">
+                        Güncelle
+                    </button>
+                </td>
+                <td>
+                    <a href="#" class="btn btn-danger btn-patient-delete" data-id="@p.PatientId">Sil</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+<!-- Güncelle Modal -->
+<div class="modal" id="updatePatientModal" tabindex="-1" role="dialog" aria-labelledby="updatePatientModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="updatePatientModalLabel">Hasta Güncelle</h5>
+                <button type="button" class="btn-close" onclick="closeUpdatePatientModal()" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="updatePatientForm">
+                    <input type="hidden" id="PatientId" name="PatientId" />
+                    <div class="mb-3">
+                        <label>Ad Soyad</label>
+                        <input type="text" id="PatientFullName" name="PatientFullName" class="form-control" placeholder="AD SOYAD" />
+                    </div>
+                    <div class="mb-3">
+                        <label>TC No</label>
+                        <input type="text" id="PatientTcNo" name="PatientTcNo" class="form-control" maxlength="11" pattern="[0-9]{11}" placeholder="12345678901" />
+                    </div>
+                    <div class="mb-3">
+                        <label>Yaş</label>
+                        <input type="text" id="PatientAge" name="PatientAge" class="form-control" />
+                    </div>
+                    <div class="mb-3">
+                        <label>Cinsiyet</label>
+                        <select id="PatientGender" name="PatientGender" required>
+                            <option value="" disabled selected>Seçiniz</option>
+                            <option value="Erkek">Erkek</option>
+                            <option value="Kadın">Kadın</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label>Email</label>
+                        <input type="email" id="PatientEmail" name="PatientEmail" class="form-control" />
+                    </div>
+                    <div class="mb-3">
+                        <label>Şifre</label>
+                        <input type="text" id="PatientPassword" name="PatientPassword" class="form-control" />
+                    </div>
+                    <div class="mb-3">
+                        <label>Telefon</label>
+                        <input type="text" id="PatientPhoneNumber" name="PatientPhoneNumber" class="form-control" placeholder="0 (5XX) XXX XXXX" maxlength="15" />
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" onclick="closeUpdatePatientModal()">Kapat</button>
+                <button type="button" class="btn btn-primary" id="updatePatientBtn">Güncelle</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
