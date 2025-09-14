@@ -1,6 +1,6 @@
 # Hastane Randevu Sistemi
 
-Backendini N-Katmanlı Mimari ve C# Web API kullanarak yaptığım bu projede, hastaneler için temel kullanıcı dostu bir randevu yönetim sistemi amaçlanmaktadır. Sistem, hastaların doktorlarla randevu alabilmesini, doktorların randevularını yönetebilmesini ve yöneticilerin (adminlerin) tüm sistemi kontrol edebilmesini sağlar.
+Backendini Katmanlı Mimari ve C# Web API kullanarak, UI kısmında ise MVC kullanarak yaptığım bu projede, hastaneler için temel kullanıcı dostu bir randevu yönetim sistemi amaçlanmaktadır. Sistem, hastaların doktorlarla randevu alabilmesini, doktorların randevularını yönetebilmesini ve yöneticilerin (adminlerin) tüm sistemi kontrol edebilmesini sağlar.
 
 1 - Ana Sayfa
 <img width="1919" height="1029" alt="Ekran görüntüsü 2025-09-12 114356" src="https://github.com/user-attachments/assets/7350fb46-00b2-4150-ad61-d73599534a54" />
